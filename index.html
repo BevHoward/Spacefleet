@@ -2946,8 +2946,8 @@ Would you look at that, (print: $player), you found:
 
 What would you like to do?
 Harvest trilithium [[Harvest (1, -4)]]
-(if: $CM015 is &quot;false&quot;)[Accept mission [[CM-015]]]
-(if: $CM015 is &quot;fail&quot;)[Retry mission [[CM-015]]]
+(if: $cadet is &quot;true&quot; and $CM015 is &quot;false&quot;)[Accept mission [[CM-015]]]
+(if: $CM015 is &quot;true&quot;)[Go back to mission [[CM-015]]]
 Return to [[(1, -4)]]
 
 (text-color:orange)[(if: $CM001 is &quot;true&quot;)[CM-001 Current Scan Data:
@@ -2987,7 +2987,7 @@ It&#39;s not much, (print: $player), but you found:
 
 
 What would you like to do?
-(if: $CM014 is &quot;fail&quot;)[Retry mission [[CM-014]]]
+(if: $CM014 is &quot;true&quot;)[Go back to mission [[CM-014]]]
 (if: $cadet is &quot;true&quot; and $CM014 is &quot;false&quot;)[Accept mission [[CM-014]]]
 Return to [[(4, -3)]]
 
@@ -5210,7 +5210,7 @@ Congratulations, (print: $player), you found:
 What would you like to do?
 (if: $lost is &quot;decoded&quot;)[You&#39;ve found the floundering ship! Collect [[CM-008 Reward]]]
 (if: $cadet is &quot;true&quot; and $CM013 is &quot;false&quot;)[Accept mission [[CM-013]]]
-(if: $CM013 is &quot;fail&quot;)[Retry [[CM-013]]]
+(if: $CM013 is &quot;true&quot;)[Go back to [[CM-013]]]
 Harvest quaterium [[Harvest (5, -2)]]
 Return to [[(5, -2)]]
 
@@ -7155,7 +7155,7 @@ Your findings will help shape patrol routes for our larger vessels as we work to
 Return to [[(-1, 3)]]</tw-passagedata><tw-passagedata pid="610" name="CM-002 Reward" tags="cadet" position="1925,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**CM-002 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1N9m60TgyJrXtmiNYebTTAYKEj0FYuxfY/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $CM002 to &quot;complete&quot;)
+(set: $CM002 to &quot;complete&quot;)(set: $fever to &quot;cured&quot;)
 Well done, (print: $player)! With the vaccine safely delivered, you successfully completed mission CM-002!
 
 You&#39;ve earned:
@@ -7170,7 +7170,7 @@ Return to [[(6, 0)]]
 (text-color:#00FF00)[**Upload a screenshot of this screen and upload it to Canvas. Code UUV3Z unlocks mission CM-002 in Canvas.**]</tw-passagedata><tw-passagedata pid="611" name="CM-003 Reward" tags="cadet" position="2050,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**CM-003 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1vyvJO-wLvKIhAuKwBu_OC44fqE8TYBEl/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $CM003 to &quot;complete&quot;)
+(set: $CM003 to &quot;complete&quot;)(if: $compact_generator is &quot;delivered&quot;)
 Well done, (print: $player)! You successfully completed mission CM-003! You&#39;re proving to be a capable member of the UESF. You&#39;re certainly catching the attention of the admiralty early in your career - great promotions await someone with your potential!
 
 You&#39;ve earned:
@@ -7185,7 +7185,7 @@ Return to [[(6, 0)]]
 (text-color:#00FF00)[**Upload a screenshot of this screen and upload it to Canvas. Code FGU2P unlocks mission CM-003 in Canvas.**]</tw-passagedata><tw-passagedata pid="612" name="CM-004 Reward" tags="cadet" position="2175,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**CM-004 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1vfrCSVcRPjyGhRFazxE418NnoUHWnGol/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $CM004 to &quot;complete&quot;)
+(set: $CM004 to &quot;complete&quot;)(if: $vaccine_moss is &quot;delivered&quot;)
 Well done, (print: $player)! You successfully completed mission CM-004! What would the colonists on Arveda III do without you?
 
 You&#39;ve earned:
@@ -8249,7 +8249,7 @@ You have entered: (print: $solution2)
 Return to [[(0, 2)]]</tw-passagedata><tw-passagedata pid="718" name="CM-008 Reward" tags="cadet" position="2675,200" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**CM-008 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1gADXykIhX5JD7S-iF5MQzXipsDSj2ocO/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $CM008 to &quot;complete&quot;)
+(set: $CM008 to &quot;complete&quot;)(set: $lost to &quot;collected&quot;)
 Well done, (print: $player)! You successfully completed mission CM-008!
 
 You&#39;ve earned:
@@ -8259,7 +8259,7 @@ You&#39;ve earned:
 Be sure to stop by SSA3 when you&#39;re ready to upgrade your ship!
 
 What would you like to do?
-Return to [[(0, 2)]]
+Return to [[(5, -2)]]
 
 (text-color:yellow)[**Use code PAL3L to unlock mission CM-008 in Canvas.**]</tw-passagedata><tw-passagedata pid="719" name="Dockyard" tags="locations" position="4100,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1ZdHQQhnhkWp6lcNKuRM1D9z1GJAHn5Su&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
