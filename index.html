@@ -79,7 +79,7 @@ Return to [[Earth, 2235]]</tw-passagedata><tw-passagedata pid="3" name="Start" t
 
 (set: $CM001 to &quot;false&quot;)(set: $CM002 to &quot;false&quot;)(set: $CM003 to &quot;false&quot;)(set: $CM004 to &quot;false&quot;)(set: $CM005 to &quot;false&quot;)(set: $CM006 to &quot;false&quot;)(set: $CM007 to &quot;false&quot;)(set: $CM008 to &quot;false&quot;)(set: $CM009 to &quot;false&quot;)(set: $CM010 to &quot;false&quot;)(set: $CM011 to &quot;false&quot;)(set: $CM012 to &quot;false&quot;)(set: $CM013 to &quot;false&quot;)(set: $CM014 to &quot;false&quot;)(set: $CM015 to &quot;false&quot;)(set: $arrays to 0)(set: $pirates to 0)
 
-(set: $trader to &quot;false&quot;)(set: $mule to &quot;none&quot;)(set: $sash to &quot;false&quot;)</tw-passagedata><tw-passagedata pid="4" name="Footer" tags="footer" position="100,200" size="100,100">
+(set: $trader to &quot;false&quot;)(set: $mule to &quot;none&quot;)(set: $sash to &quot;false&quot;)(set: $AI to &quot;Quantum AI Interface&quot;)</tw-passagedata><tw-passagedata pid="4" name="Footer" tags="footer" position="100,200" size="100,100">
 
 
 &lt;span style=&quot;font-size: 70%&quot;&gt;
@@ -167,7 +167,7 @@ Travel to [[(2, 0)]] (&quot;right&quot;)
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -231,9 +231,10 @@ You now have $quaterium quaterium dioxide.
 (else:)[(set: $quaterium to $quaterium)]
 </tw-passagedata><tw-passagedata pid="12" name="Trilithium Harvest" tags="" position="600,0" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#7FFFD4)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1zmasEn54o29hH7O1C5BExcj3RvtPzkLB&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
 Congratulations, $player, you found 0.3 trilithium!
-{(if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]}
+(if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -241,9 +242,9 @@ You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium cry
 </tw-passagedata><tw-passagedata pid="13" name="Quaterium Harvest" tags="" position="700,0" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1nht-zznF5Et3dLlhIm-qsiiTtKwqkkik&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
-{(if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
-(else:)[(set: $max_quaterium to $max_quaterium)]}
+(if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
 You now have $quaterium quaterium dioxide.
@@ -252,7 +253,7 @@ You now have $quaterium quaterium dioxide.
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.1 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 1*$server/100+1/10)](else:)[(set: $trilithium to it + 1/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -2321,7 +2322,7 @@ Return to (link-goto: $name)
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.1 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 1*$server/100+1/10)](else:)[(set: $trilithium to it + 1/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -2428,7 +2429,7 @@ Return to [[(1, 0)]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -2576,7 +2577,7 @@ Return to (link-goto: $name)</tw-passagedata><tw-passagedata pid="182" name="Har
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -2586,7 +2587,7 @@ Return to [[(-2, 1)]]</tw-passagedata><tw-passagedata pid="183" name="Harvest (2
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -2596,7 +2597,7 @@ Return to [[(2, 1)]]</tw-passagedata><tw-passagedata pid="184" name="Harvest (-1
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.1 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 1*$server/100+1/10)](else:)[(set: $trilithium to it + 1/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -2606,7 +2607,7 @@ Return to [[(-1, 2)]]</tw-passagedata><tw-passagedata pid="185" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -2616,7 +2617,7 @@ Return to [[(-1, -1)]]</tw-passagedata><tw-passagedata pid="186" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -2626,7 +2627,7 @@ Return to [[(1, -1)]]</tw-passagedata><tw-passagedata pid="187" name="Harvest (3
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.1 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 1*$server/100+1/10)](else:)[(set: $trilithium to it + 1/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -2636,7 +2637,7 @@ Return to [[(3, -1)]]</tw-passagedata><tw-passagedata pid="188" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -2646,7 +2647,7 @@ Return to [[(-2, -2)]]</tw-passagedata><tw-passagedata pid="189" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.1 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 1*$server/100+1/10)](else:)[(set: $trilithium to it + 1/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -2656,7 +2657,7 @@ Return to [[(-1, -2)]]</tw-passagedata><tw-passagedata pid="190" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -2666,7 +2667,7 @@ Return to [[(0, -2)]]</tw-passagedata><tw-passagedata pid="191" name="Harvest (1
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -2676,7 +2677,7 @@ Return to [[(1, -2)]]</tw-passagedata><tw-passagedata pid="192" name="Harvest (3
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 50 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 50*$server/10+50)](else:)[(set: $quaterium to it + 50)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -5425,7 +5426,7 @@ Travel to [[(5, 4)]]</tw-passagedata><tw-passagedata pid="374" name="Explore (4,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -5446,7 +5447,7 @@ What do you want to do?
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -5456,7 +5457,7 @@ Return to [[(-2, 5)]]</tw-passagedata><tw-passagedata pid="378" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -5466,7 +5467,7 @@ Return to [[(-4, 4)]]</tw-passagedata><tw-passagedata pid="379" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -5476,7 +5477,7 @@ Return to [[(-2, 4)]]</tw-passagedata><tw-passagedata pid="380" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -5485,7 +5486,9 @@ You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium cry
 Return to [[(-1, 4)]]</tw-passagedata><tw-passagedata pid="381" name="To Do" tags="" position="50,0" size="200,100">Mule subplot in the white zone (starts at SSA-006)
 Uniform subplot (starts at quartermaster - uniform)
 Other things to do at Arveda III
-</tw-passagedata><tw-passagedata pid="382" name="(-6, 10)" tags="" position="600,1400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (-6, 10)**]]]
+
+AI video for &quot;your ship&quot; passage
+Angst video for &quot;Leave the scientists behind&quot; passage</tw-passagedata><tw-passagedata pid="382" name="(-6, 10)" tags="" position="600,1400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (-6, 10)**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
@@ -6145,7 +6148,19 @@ What would you like to do?
 Travel to [[(-1, 13)]]
 Travel to [[(-1, 11)]]
 Travel to [[(-2, 12)]]
-Travel to [[(0, 12)]]</tw-passagedata><tw-passagedata pid="454" name="Explore (-8, 12)" tags="" position="200,900" size="100,100"></tw-passagedata><tw-passagedata pid="455" name="Explore (-7, 12)" tags="" position="450,900" size="100,100"></tw-passagedata><tw-passagedata pid="456" name="Explore (-6, 12)" tags="" position="700,900" size="100,100"></tw-passagedata><tw-passagedata pid="457" name="Explore (-5, 12)" tags="" position="950,900" size="100,100"></tw-passagedata><tw-passagedata pid="458" name="Explore (-4, 12)" tags="" position="1200,900" size="100,100"></tw-passagedata><tw-passagedata pid="459" name="Explore (-3, 12)" tags="" position="1450,900" size="100,100"></tw-passagedata><tw-passagedata pid="460" name="(-3, 11)" tags="junior" position="1350,1150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (-3, 11)**]]]
+Travel to [[(0, 12)]]</tw-passagedata><tw-passagedata pid="454" name="Explore (-8, 12)" tags="" position="200,900" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1yQ96CK9nwYteAXLTYxWoWz3L8c5KteHL&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+(text-colour:#87CEEB)[//INSERT FLAVOUR TEXT/VIDEO HERE//]
+
+Congratulations, $player, you found:
+
+[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1nht-zznF5Et3dLlhIm-qsiiTtKwqkkik&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]]quaterium dioxide mining site
+
+
+What would you like to do?
+Harvest quaterium [[Harvest (-8, 12)]]
+Return to [[(-8, 12)]]</tw-passagedata><tw-passagedata pid="455" name="Explore (-7, 12)" tags="" position="450,900" size="100,100"></tw-passagedata><tw-passagedata pid="456" name="Explore (-6, 12)" tags="" position="700,900" size="100,100"></tw-passagedata><tw-passagedata pid="457" name="Explore (-5, 12)" tags="" position="950,900" size="100,100"></tw-passagedata><tw-passagedata pid="458" name="Explore (-4, 12)" tags="" position="1200,900" size="100,100"></tw-passagedata><tw-passagedata pid="459" name="Explore (-3, 12)" tags="" position="1450,900" size="100,100"></tw-passagedata><tw-passagedata pid="460" name="(-3, 11)" tags="junior" position="1350,1150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (-3, 11)**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
@@ -6329,7 +6344,7 @@ Travel to [[(0, 7)]]</tw-passagedata><tw-passagedata pid="511" name="Explore (-8
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6339,7 +6354,7 @@ Return to [[(-3, 3)]]</tw-passagedata><tw-passagedata pid="549" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6350,7 +6365,7 @@ Return to [[(-1, 3)]]</tw-passagedata><tw-passagedata pid="550" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6360,7 +6375,7 @@ Return to [[(-4, 3)]]</tw-passagedata><tw-passagedata pid="551" name="Harvest (4
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (set: $quaterium to it + 150)
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6370,7 +6385,7 @@ Return to [[(4, 3)]]</tw-passagedata><tw-passagedata pid="552" name="Harvest (-5
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6380,7 +6395,7 @@ Return to [[(-5, 2)]]</tw-passagedata><tw-passagedata pid="553" name="Harvest (0
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6390,7 +6405,7 @@ Return to [[(0, 2)]]</tw-passagedata><tw-passagedata pid="554" name="Harvest (1,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6400,7 +6415,7 @@ Return to [[(1, 2)]]</tw-passagedata><tw-passagedata pid="555" name="Harvest (2,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6410,7 +6425,7 @@ Return to [[(2, 2)]]</tw-passagedata><tw-passagedata pid="556" name="Harvest (3,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6420,7 +6435,7 @@ Return to [[(3, 2)]]</tw-passagedata><tw-passagedata pid="557" name="Harvest (5,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (set: $trilithium to it + 3/10)
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have $trilithium trilithium crystals.
@@ -6430,7 +6445,7 @@ Return to [[(5, 2)]]</tw-passagedata><tw-passagedata pid="558" name="Harvest (4,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6440,7 +6455,7 @@ Return to [[(4, 1)]]</tw-passagedata><tw-passagedata pid="559" name="Harvest (6,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6450,7 +6465,7 @@ Return to [[(6, 1)]]</tw-passagedata><tw-passagedata pid="560" name="Harvest (3,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6460,7 +6475,7 @@ Return to [[(3, 0)]]</tw-passagedata><tw-passagedata pid="561" name="Harvest (4,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6470,7 +6485,7 @@ Return to [[(4, 0)]]</tw-passagedata><tw-passagedata pid="562" name="Harvest (7,
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6480,7 +6495,7 @@ Return to [[(7, 0)]]</tw-passagedata><tw-passagedata pid="563" name="Harvest (-3
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6490,17 +6505,17 @@ Return to [[(-3, 0)]]</tw-passagedata><tw-passagedata pid="564" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
 You now have $quaterium quaterium dioxide.
 (if: $ship &gt; 9)[(set: $max_quaterium to 350000)](else-if: $ship &gt; 8)[(set: $max_quaterium to 225000)](else-if: $ship &gt; 7)[(set: $max_quaterium to 150000)](else-if: $ship &gt; 6)[(set: $max_quaterium to 100000)](else-if: $ship &gt; 5)[(set: $max_quaterium to 75000)](else-if: $ship &gt; 4)[(set: $max_quaterium to 40000)](else-if: $ship &gt; 3)[(set: $max_quaterium to 20000)](else-if: $ship &gt; 2)[(set: $max_quaterium to 10000)](else-if: $ship &gt; 1)[(set: $max_quaterium to 5000)](else:)[(set: $quaterium to $quaterium)]
-Return to [[(-4, 1)]]</tw-passagedata><tw-passagedata pid="565" name="Harvest (-6, 1)" tags="" position="700,3750" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[&lt;img src=&quot;https://drive.google.com/uc?id=1nht-zznF5Et3dLlhIm-qsiiTtKwqkkik&quot;&gt;]]
+Return to [[(-4, 1)]]</tw-passagedata><tw-passagedata pid="565" name="Harvest (-6, 1)" tags="" position="700,3750" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1nht-zznF5Et3dLlhIm-qsiiTtKwqkkik&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-Congratulations, $player, you found 150 quaterium!
-(if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+Congratulations, $player, you found 500 quaterium!
+(if: $server &gt;0)[(set: $quaterium to it + 500*$server/10+500)](else:)[(set: $quaterium to it + 500)]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6521,7 +6536,7 @@ What do you want to do?
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6531,7 +6546,7 @@ Return to [[(-5, 0)]]</tw-passagedata><tw-passagedata pid="568" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6541,7 +6556,7 @@ Return to [[(-4, -1)]]</tw-passagedata><tw-passagedata pid="569" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6551,7 +6566,7 @@ Return to [[(-3, -1)]]</tw-passagedata><tw-passagedata pid="570" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6571,7 +6586,7 @@ What do you want to do?
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6581,7 +6596,7 @@ Return to [[(7, -2)]]</tw-passagedata><tw-passagedata pid="573" name="Harvest (5
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6591,7 +6606,7 @@ Return to [[(5, -2)]]</tw-passagedata><tw-passagedata pid="574" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6601,7 +6616,7 @@ Return to [[(-4, -2)]]</tw-passagedata><tw-passagedata pid="575" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6611,7 +6626,7 @@ Return to [[(-5, -2)]]</tw-passagedata><tw-passagedata pid="576" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6621,7 +6636,7 @@ Return to [[(-1, -3)]]</tw-passagedata><tw-passagedata pid="577" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6631,7 +6646,7 @@ Return to [[(0, -3)]]</tw-passagedata><tw-passagedata pid="578" name="Harvest (2
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6641,7 +6656,7 @@ Return to [[(2, -3)]]</tw-passagedata><tw-passagedata pid="579" name="Harvest (3
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6651,7 +6666,7 @@ Return to [[(3, -3)]]</tw-passagedata><tw-passagedata pid="580" name="Harvest (5
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6661,7 +6676,7 @@ Return to [[(5, -3)]]</tw-passagedata><tw-passagedata pid="581" name="Harvest (6
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6671,7 +6686,7 @@ Return to [[(6, -3)]]</tw-passagedata><tw-passagedata pid="582" name="Harvest (1
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6681,7 +6696,7 @@ Return to [[(1, -4)]]</tw-passagedata><tw-passagedata pid="583" name="Harvest (-
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 0.3 trilithium!
 (if: $server &gt;0)[(set: $trilithium to it + 3*$server/100+3/10)](else:)[(set: $trilithium to it + 3/10)]
-(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 10)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 9)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 8)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 7)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 6)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 5)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 4)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 3)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 2)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
+(if: $T_Vault &gt; 9)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 8)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 7)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 6)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 5)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 4)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 3)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 2)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 1)[(set: $max_trilithium to it + 1)](if: $T_Vault &gt; 0)[(set: $max_trilithium to it + 1)](else:)[(set: $max_trilithium to $max_trilithium)]
 (if: $trilithium &gt; $max_trilithium)[(text-colour:red)[You have exceeded your maximum trilithium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $trilithium to $max_trilithium)]
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
@@ -6691,7 +6706,7 @@ Return to [[(-1, -4)]]</tw-passagedata><tw-passagedata pid="584" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -6701,7 +6716,7 @@ Return to [[(-3, -4)]]</tw-passagedata><tw-passagedata pid="585" name="Harvest (
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 Congratulations, $player, you found 150 quaterium!
 (if: $server &gt;0)[(set: $quaterium to it + 150*$server/10+150)](else:)[(set: $quaterium to it + 150)]
-(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.9))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.8))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.7))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.6))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.5))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.4))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.3))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.2))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
+(if: $Q_Vault &gt; 9)[(set: $max_quaterium to it + it)](if: $Q_Vault &gt; 8)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 7)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 6)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 5)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 4)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 3)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 2)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 1)[(set: $max_quaterium to it + ($max_quaterium*0.1))](if: $Q_Vault &gt; 0)[(set: $max_quaterium to it + ($max_quaterium*0.1))]
 (else:)[(set: $max_quaterium to $max_quaterium)]
 (if: $quaterium &gt; $max_quaterium)[(text-colour:red)[You have exceeded your maximum quaterium storage capacity! Unfortunately, the excess resource cannot be harvested and is lost to you forever.] (set: $quaterium to $max_quaterium)]
 (else:)[(set: $quaterium to $quaterium)]
@@ -8309,9 +8324,8 @@ What would you like to do?
 Return to (link-goto: $name)</tw-passagedata><tw-passagedata pid="732" name="JO-001" tags="" position="3700,0" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**Junior Officer Mission 001**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1UFdmmK7Q05KE6vsZK0okbR7YRrR8HppS/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $JO001 to &quot;true&quot;)
-
-You receive an urgent transmission from HQ. A small research vessel carrying six scientists has crash landed on their way to study the barren planetoid AX7-Alpha-01 located at (1, 8). Their ship never made it to AX7-Alpha-01, but should be somewhere nearby.
+(set: $JO001 to &quot;true&quot;)(set: $scientists to &quot;lost&quot;)
+You receive an urgent transmission from HQ. A small research vessel carrying five scientists has crash landed on their way to study the barren planetoid AX7-Alpha-01 located at (1, 8). Their ship never made it to AX7-Alpha-01, but should be somewhere nearby.
 
 Locate and rescue the scientists.
 
@@ -8476,12 +8490,16 @@ What would you like to do?
 (if: $senior is &quot;true&quot;)[Travel to [[(1, 10)]]](else:)[Travel to (1, 10) - (text-color:red)[Access Denied]]
 Travel to [[(1, 8)]]
 Travel to [[(0, 9)]]
-(if: $senior is &quot;true&quot;)[Travel to [[(2, 9)]]](else:)[Travel to (2, 9) - (text-color:red)[Access Denied]]</tw-passagedata><tw-passagedata pid="798" name="Explore (1, 9)" tags="" position="2450,1650" size="100,100"></tw-passagedata><tw-passagedata pid="799" name="Explore (0, 8)" tags="" position="2200,1900" size="100,100">
+(if: $senior is &quot;true&quot;)[Travel to [[(2, 9)]]](else:)[Travel to (2, 9) - (text-color:red)[Access Denied]]</tw-passagedata><tw-passagedata pid="798" name="Explore (1, 9)" tags="" position="2450,1650" size="100,100"></tw-passagedata><tw-passagedata pid="799" name="Explore (0, 8)" tags="locations" position="2200,1900" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+(text-color:#87CEEB)[//INSERT COLOUR TEXT HERE//]
 
 This area is a known hotbed of pirate and smuggling activity. Scanning the area may lead to detection by one or more pirate vessels if any are in the area.
 
 What would you like to do?
-Scan the [[outer planetoids]] in the same system housing AX7-Alpha-01. 
+(if: $scientists is &quot;lost&quot;)[Scan the [[outer planetoids]] in the same system housing AX7-Alpha-01 ]
+[[Scan (0, 8)]] for pirates
 Return to [[(0, 8)]]
 </tw-passagedata><tw-passagedata pid="800" name="(1, 8)" tags="junior" position="2350,1900" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (1, 8)**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
@@ -8496,9 +8514,15 @@ What would you like to do?
 Travel to [[(1, 9)]]
 Travel to [[(1, 7)]]
 Travel to [[(0, 8)]]
-(if: $senior is &quot;true&quot;)[Travel to [[(2, 8)]]](else:)[Travel to (2, 8) - (text-color:red)[Access Denied]]</tw-passagedata><tw-passagedata pid="801" name="Explore (1, 8)" tags="" position="2450,1900" size="100,100">
+(if: $senior is &quot;true&quot;)[Travel to [[(2, 8)]]](else:)[Travel to (2, 8) - (text-color:red)[Access Denied]]</tw-passagedata><tw-passagedata pid="801" name="Explore (1, 8)" tags="locations" position="2450,1900" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
-Explore [[AX7-Alpha-01]]</tw-passagedata><tw-passagedata pid="802" name="Explore (0, 7)" tags="" position="2200,2150" size="100,100"></tw-passagedata><tw-passagedata pid="803" name="(1, 7)" tags="junior" position="2350,2150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (1, 7)**]]]
+(text-color:#87CEEB)[//INSERT COLOUR TEXT HERE//]
+
+
+What do you want to do?
+Explore [[AX7-Alpha-01]]
+Return to [[(1, 8)]]</tw-passagedata><tw-passagedata pid="802" name="Explore (0, 7)" tags="" position="2200,2150" size="100,100"></tw-passagedata><tw-passagedata pid="803" name="(1, 7)" tags="junior" position="2350,2150" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (1, 7)**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
@@ -10216,7 +10240,10 @@ No. [[Game Over]]
 
 [(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1kHBb8GjSbNhUKPf19lDv9zOb4yDW33cF&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]]600 XP
 
-</tw-passagedata><tw-passagedata pid="1065" name="SO-001 Reward" tags="" position="6700,500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F5FFFA)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**SO-001 Reward**]]]
+
+What do you want to do?
+
+Return to [[(0, 8)]]</tw-passagedata><tw-passagedata pid="1065" name="SO-001 Reward" tags="" position="6700,500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F5FFFA)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**SO-001 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F5FFFA)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1UFdmmK7Q05KE6vsZK0okbR7YRrR8HppS/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 (set: $JO001 to &quot;complete&quot;)
@@ -10507,15 +10534,18 @@ Return to (link-goto: $name)</tw-passagedata><tw-passagedata pid="1083" name="Mi
 (set: $name to (history:)&#39;s last)
 Return to (link-goto: $name)
 
-(text-color:grey)[(css: &quot;font-size: 30%;&quot;)[Stuck on this screen? Emergency transport to [[(0, 0)]]]]</tw-passagedata><tw-passagedata pid="1084" name="AX7-Alpha-01" tags="" position="4375,5400" size="100,100">
+(text-color:grey)[(css: &quot;font-size: 30%;&quot;)[Stuck on this screen? Emergency transport to [[(0, 0)]]]]</tw-passagedata><tw-passagedata pid="1084" name="AX7-Alpha-01" tags="" position="4375,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
-Return to [[(1, 8)]]</tw-passagedata><tw-passagedata pid="1085" name="outer planetoids" tags="" position="4500,5400" size="100,100">
+Return to [[(1, 8)]]</tw-passagedata><tw-passagedata pid="1085" name="outer planetoids" tags="" position="4500,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 The scientists&#39; distress signal is coming from a system of caves on the largest planetoid.
 
 What do you do?
 Land your ship and prepare to enter the [[caves]]
-Return to [[(0, 8)]]</tw-passagedata><tw-passagedata pid="1086" name="caves" tags="" position="4500,5525" size="100,100">
+Return to [[(0, 8)]]</tw-passagedata><tw-passagedata pid="1086" name="caves" tags="" position="4500,5525" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=19ttgmXKELdNlH8zc1ZAlnWXjCv58fBRd&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 As you enter the caves, you hear the sound of rocks falling in the distance. You realize the caves are unstable and the whole system could collapse at any moment. You must hurry if you&#39;re going to find the scientists before it is too late. 
 
@@ -10526,17 +10556,27 @@ What do you want to do?
 Go [[North]]
 Go [[South]]
 Go [[West]]
-Go [[East]]</tw-passagedata><tw-passagedata pid="1087" name="North" tags="" position="4500,5650" size="100,100">
+Go [[East]]
+Return to [[your ship]]</tw-passagedata><tw-passagedata pid="1087" name="North" tags="" position="4500,5650" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1w97mVX_xzAWdS6Yf5Hnvk7jRlgvKZhu1&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
-dead end</tw-passagedata><tw-passagedata pid="1088" name="South" tags="" position="4500,5900" size="100,100">
+You shine your light down the passageway and frown in frustration. The passage opens into a small cavern with no exits. You&#39;ve reached a dead end.
+
+
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1088" name="South" tags="" position="4500,5900" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XP5RP-3ot_if3d-XWeWtYHjh99gmRQ01&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 The cavern is empty.
+
 
 What do you want to do?
 Go back to the entrance to the [[caves]]
 Go [[South ]]
 Go [[West ]]
-Go [[East ]]</tw-passagedata><tw-passagedata pid="1089" name="West" tags="" position="4375,5775" size="100,100">
+Go [[East ]]</tw-passagedata><tw-passagedata pid="1089" name="West" tags="" position="4375,5775" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XP5RP-3ot_if3d-XWeWtYHjh99gmRQ01&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 The cavern is empty.
 
@@ -10544,20 +10584,29 @@ What do you want to do?
 Go [[North  ]]
 Go [[South  ]]
 Go [[West  ]]
-Go back to the entrance to the [[caves]]</tw-passagedata><tw-passagedata pid="1090" name="East" tags="" position="4625,5775" size="100,100">
+Go back to the entrance to the [[caves]]</tw-passagedata><tw-passagedata pid="1090" name="East" tags="" position="4625,5775" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1w97mVX_xzAWdS6Yf5Hnvk7jRlgvKZhu1&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
-dead end
-</tw-passagedata><tw-passagedata pid="1091" name="Call out" tags="" position="4500,5775" size="100,100">
+You shine your light down the passageway and frown in frustration. The passage opens into a small cavern with no exits. You&#39;ve reached a dead end.
+
+
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1091" name="Call out" tags="" position="4500,5775" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1w97mVX_xzAWdS6Yf5Hnvk7jRlgvKZhu1&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 &quot;Hello! Can anybody hear me?&quot; you shout.
 
 Suddenly, the rock walls surrounding you shudder. A deafening roar rushes toward you from the western passage, pushing a massive wave of dust ahead of it. Blind and deafened, you drop to the ground and cover your head in a futile effort to protect yourself from injury as the cave system collapses around you.
 
-The world around you goes [[black]] as your consciousness slips away.</tw-passagedata><tw-passagedata pid="1092" name="black" tags="" position="4625,5400" size="100,100">
+The world around you goes [[black]] as your consciousness slips away.</tw-passagedata><tw-passagedata pid="1092" name="black" tags="" position="4625,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
-Rescued and imprisoned by pirates</tw-passagedata><tw-passagedata pid="1093" name="South " tags="" position="4500,6025" size="100,100">
+Rescued and imprisoned by pirates</tw-passagedata><tw-passagedata pid="1093" name="South " tags="" position="4500,6025" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XP5RP-3ot_if3d-XWeWtYHjh99gmRQ01&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 The cavern is empty.
+
 
 What do you want to do?
 Go back to the entrance to the [[caves]]
@@ -10565,39 +10614,91 @@ Go [[South   ]]
 Go [[West   ]]
 Go [[East   ]]
 
-</tw-passagedata><tw-passagedata pid="1094" name="East " tags="" position="4625,5900" size="100,100">
+</tw-passagedata><tw-passagedata pid="1094" name="East " tags="" position="4625,5900" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1l-9YBK--otMyRGnIsyfqMnkM7WlsV7oK&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
-dead end</tw-passagedata><tw-passagedata pid="1095" name="West " tags="" position="4375,5900" size="100,100">
+You shine your light down the passageway and frown in frustration. The passage opens into a small cavern with no exits. You&#39;re running out of time and you&#39;ve reached a dead end.
 
-dead end
-</tw-passagedata><tw-passagedata pid="1096" name="West  " tags="" position="4250,5775" size="100,100">
 
-dead end
-</tw-passagedata><tw-passagedata pid="1097" name="North  " tags="" position="4375,5650" size="100,100">
+What do you want to do?
 
-dead end
-</tw-passagedata><tw-passagedata pid="1098" name="South  " tags="" position="4250,5900" size="100,100">
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1095" name="West " tags="" position="4375,5900" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1l-9YBK--otMyRGnIsyfqMnkM7WlsV7oK&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
-dead end</tw-passagedata><tw-passagedata pid="1099" name="South   " tags="" position="4500,6150" size="100,100">
+You shine your light down the passageway and frown in frustration. The passage opens into a large cavern with no exits other than a very large drop off a very large cliff. You&#39;re running out of time and you&#39;ve reached a dead end.
 
-dead end
-</tw-passagedata><tw-passagedata pid="1100" name="West   " tags="" position="4375,6025" size="100,100">
 
-dead end</tw-passagedata><tw-passagedata pid="1101" name="East   " tags="" position="4625,6025" size="100,100">
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1096" name="West  " tags="" position="4250,5775" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=15jw7MC8ymE6Wrz-yfqu8myok0lYOGSd9&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+You shine your light down the passageway and sigh. The passage ends at the foot of a massive rockfall. You&#39;re running out of time and you&#39;ve reached a dead end.
+
+
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1097" name="North  " tags="" position="4375,5650" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=15jw7MC8ymE6Wrz-yfqu8myok0lYOGSd9&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+You shine your light down the passageway and groan in frustration. The passage opens into a small cavern with no exits. You&#39;re running out of time and you&#39;ve reached a dead end.
+
+
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1098" name="South  " tags="" position="4250,5900" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=15jw7MC8ymE6Wrz-yfqu8myok0lYOGSd9&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+You shine your light down the passageway and frown in frustration. The passage opens into a small cavern with no exits. You&#39;re running out of time and you&#39;ve reached a dead end.
+
+
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1099" name="South   " tags="" position="4500,6150" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1l-9YBK--otMyRGnIsyfqMnkM7WlsV7oK&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+You shine your light down the passageway and grumble in frustration. The passage opens into a small cavern with no exits. The sounds of rockfalls are getting louder. You&#39;re running out of time to find the scientists and you&#39;ve reached a dead end.
+
+
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1100" name="West   " tags="" position="4375,6025" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1l-9YBK--otMyRGnIsyfqMnkM7WlsV7oK&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+You shine your light down the passageway and frown in frustration. The passage opens into a small cavern with no exits. The sounds of rockfalls are getting closer. You&#39;re running out of time to find the scientists and you&#39;ve reached a dead end.
+
+
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1101" name="East   " tags="" position="4625,6025" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XP5RP-3ot_if3d-XWeWtYHjh99gmRQ01&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 The cavern is empty.
+
 
 What do you want to do?
 Go [[North   ]]
 Go [[South    ]]
 Go back to the entrance to the [[caves]]
-Go [[East  ]]</tw-passagedata><tw-passagedata pid="1102" name="North   " tags="" position="4750,5900" size="100,100">
+Go [[East  ]]</tw-passagedata><tw-passagedata pid="1102" name="North   " tags="" position="4750,5900" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1l-9YBK--otMyRGnIsyfqMnkM7WlsV7oK&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+You shine your light down the passageway and frown in frustration. The passage opens into a small cavern with no exits. The sounds of rockfalls are getting louder. You&#39;re running out of time and you&#39;ve reached a dead end.
 
 
-dead end</tw-passagedata><tw-passagedata pid="1103" name="South    " tags="" position="4625,6150" size="100,100">
+What do you want to do?
 
-dead end</tw-passagedata><tw-passagedata pid="1104" name="East  " tags="" position="4750,6025" size="100,100">
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1103" name="South    " tags="" position="4625,6150" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1l-9YBK--otMyRGnIsyfqMnkM7WlsV7oK&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
+You shine your light down the passageway and frown in frustration. The passage opens into a small cavern with no exits. The sounds of rockfalls are getting louder. You&#39;re running out of time and you&#39;ve reached a dead end.
+
+
+What do you want to do?
+
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1104" name="East  " tags="locations" position="4750,6025" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=19d3hbnpkAJzSvPeerFvtWeXtk7VMSwaH&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(set: $scientists to &quot;found&quot;)
 You find the scientists huddled around a small survival torch. They&#39;ve got some bumps and bruises, but their biggest issue is dehydration.
 
 You give them water from your search and rescue kit, and patch up the worst of the injured.
@@ -10606,7 +10707,99 @@ Once you&#39;re sure everyone can walk, you lead the group out of the caves and 
 
 As you cross the open ground between the mouth of the cave entrance and your ship, you hear the unmistakable sound of engines landing behind a nearby ridge.
 
-&quot;Pirates!&quot; you shout. &quot;Hurry!&quot;</tw-passagedata></tw-storydata>
+&quot;Pirates!&quot; you shout. &quot;Hurry!&quot;
+
+You have three options: 
+1) Find cover for you and the five scientists and then try to defend your position from the pirates if you&#39;re discovered, or
+2) Make a run for your ship with the exhausted and injured scientists and try to get off-planet before the pirates find you, or
+3) Leave the scientists behind and save yourself.
+
+
+What do you want to do?
+Find [[cover]]
+Run for [[your ship]]
+[[Leave the scientists behind]]
+</tw-passagedata><tw-passagedata pid="1105" name="your ship" tags="" position="4625,5525" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1nw1FCnVX7SvCOHWX5TnTr041s2zlgNii&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+You usher the last of the scientists up the ramp and into the cargo hold of your ship. You pant from the sprint across the rocky scree, but you know now is not the time to stop and catch your breath.
+
+You point to the bench with six emergency safety harnesses on the far wall and say, &quot;Strap yourselves in. This is going to be a bumpy ride.&quot;
+
+You sprint from the cargo hold to the cockpit, calling out to your AI as you run through the corridors, &quot;Yo, $AI, prepare for emergency launch. We need to get out of here ASAP!&quot;
+
+Your AI acknowledges your command and you hear the reassuring hum of the quantum generators throttling up.
+
+You slide into your seat and buckle up.
+
+Your fingers fly over the control panel. &quot;Let&#39;s go, let&#39;s go, let&#39;s go...&quot;
+
+Your teeth rattle in your jaw as you&#39;re viciously pressed into your chair. The g-force of an emergency launch makes you feel like you weigh 2,000 kg and you swear your spine has left your back and is now embedded in the seat cushions.
+
+Your ship breaks through the atmosphere and the tremendous forces trying to press you into pudding dissipate. You sigh in relief and prepare to tell the scientists they&#39;re safe.
+[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1hk_hZo35uFL_R6pxQ-tyQOcLaEAXtlJB&quot;&gt;]]]
+Suddenly, your control panel flashes red and the alarm klaxon blares. You escaped one band of pirates, only to run into another in orbit.
+
+
+What do you want to do?
+
+Fight the [[pirates]]</tw-passagedata><tw-passagedata pid="1106" name="cover" tags="locations" position="4750,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1rB_Y92xvfEl0WfQbgUFnWmH51VLxwJCQ&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+You herd the scientists behind a rocky outcropping and urge them to be silent.
+
+You cautiously peer around the edge of the rock and spot a pair of pirates heading toward the entrance to the cave system. You signal the scientists, silently telling them to get ready to run. As soon as the pirates disappear, you&#39;ll get everyone to make a run for your ship.
+
+Just as you&#39;re about to sprint from behind the rock, you hear a pebble bounce and fall behind you. You turn to look back at the scientists and remind them to be quiet when you glance up the hill.
+[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1v5QFRyBOfDfw7Mu9F4FAdvJpA023UUAs&quot;&gt;]]]
+Five more pirates are standing along the ridge line, weapons pointed at you and your group.
+
+You slowly stand and raise your hands. 
+
+&quot;I&#39;m with Spacefleet. These scientists crash landed and I&#39;m here to rescue--&quot;
+
+The pirates fire their weapons and world around you goes [[black]] as your consciousness slips away.</tw-passagedata><tw-passagedata pid="1107" name="Leave the scientists behind" tags="" position="4750,6150" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=13nZ-S3V_2-U5J5yaqpr35pLtZEFrdD4z&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(set: $XP to 0)(set: $quaterium to 0)(set: $trilithium to 0)(set: $ship to 1)(set: $server to 0)(set: $shield_upgrade to 0)(set: $hull_upgrade to 0)(set: $systems_upgrade to 0)
+The Fleet Admiral is NOT amused. Your ship and XP progress in Spacefleet has been reset.
+
+
+What do you want to do?
+
+Return to [[(0, 8)]] demoted, demoralized, and dejected.</tw-passagedata><tw-passagedata pid="1108" name="pirates" tags="" position="4900,5400" size="100,100"></tw-passagedata><tw-passagedata pid="1109" name="PvE Victory" tags="" position="5300,5400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#DC143C)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 250%;&quot;)[**VICTORY**]]]
+[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#DC143C)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1o6OEWIUhKKUXaSDcbKD_XdLLYMNqd6Z1&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(set: $PVEwin to it + 1)(set: $trilithium to it + it*75/100)(set: $quaterium to it + it*50/100)
+
+
+
+What do you want to do?
+
+(if: $JO001 is &quot;true&quot;)[Collect mission [[JO-001 Reward]]]
+(if: $pirate4 is &quot;true&quot;)[Return to [[(0, 8)]]</tw-passagedata><tw-passagedata pid="1110" name="Scan (0, 8)" tags="" position="2100,2000" size="100,100">
+
+(set: $pirates4 to &quot;true&quot;)</tw-passagedata><tw-passagedata pid="1111" name="PvE Defeat" tags="" position="5300,5500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#778899)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 250%;&quot;)[**DEFEAT**]]]
+[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#778899)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=172Cedu2MKadPHkiI0TEsjx-Z8NYsHRKm&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(set: $PVEloss to it + 1)(set: $trilithium to it - it*90/100)(set: $quaterium to it - it*75/100)
+
+Final Pirate Ship Stats:
+
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+
+Your Ship Stats:
+
+(text-color:yellow)[Shield Strength:] $shield
+(text-color:orange)[Hull Strength:] $hull
+(text-color:blue)[Systems Function:] $systems
+
+
+What do you want to do?
+
+(if: $JO001 is &quot;true&quot;)[Try fighting the [[pirates]] again]
+(if: $pirate4 is &quot;true&quot;)[Return to [[(0, 8)]]</tw-passagedata><tw-passagedata pid="1112" name="Harvest (-8, 12)" tags="" position="200,1000" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
