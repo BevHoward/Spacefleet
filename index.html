@@ -600,13 +600,15 @@ Travel to [[(0, 8)]]
 Travel to [[(-1, 9)]]
 Travel to [[(1, 9)]]</tw-passagedata><tw-passagedata pid="72" name="(0, 8)" tags="" position="2100,1900" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (0, 8)**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set:$pirate4 to &quot;true&quot;)
 
 (text-color:#87CEEB)[//INSERT COLOUR TEXT HERE//]
 
+(if:$pirate4 is &quot;true&quot;)[(text-color:#AFEEEE)[(set: $pirate4 to &quot;victory&quot;)(set: $XP to it + 500)[Congratulations on your victory, $player! Screenshot this message and submit it to the Pirate 04 PvE mission in Canvas to collect 500 XP. Code HG4RF unlocks the mission.]]]
 
 What would you like to do?
 [[Explore (0, 8)]]
+[[Scan (0, 8)]]
 Travel to [[(0, 9)]]
 Travel to [[(0, 7)]]
 Travel to [[(-1, 8)]]
@@ -865,7 +867,7 @@ Congratulations, (print: $player), you found:
 
 What would you like to do?
 Harvest quaterium [[Harvest (1, -2)]]
-Return to [[(1, -2)]]</tw-passagedata><tw-passagedata pid="91" name="(-1, -2)" tags="tutorial" position="1850,4400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFA07A)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (-2, -2)**]]]
+Return to [[(1, -2)]]</tw-passagedata><tw-passagedata pid="91" name="(-1, -2)" tags="tutorial" position="1850,4400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFA07A)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (-1, -2)**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFA07A)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1N_mz5TpOidQSUFp2DRHXwYtuBbFWuaGG&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
@@ -878,7 +880,7 @@ Travel to [[(-1, -1)]] (&quot;up&quot;)
 (if: $cadet is &quot;true&quot;)[Travel to [[(-1, -3)]] (&quot;down&quot;)](else:)[Travel to (-1, -3) (&quot;down&quot;) - (text-color:red)[Access Denied]]
 Travel to [[(-2, -2)]] (&quot;left&quot;)
 Travel to [[(0, -2)]] (&quot;right&quot;)</tw-passagedata><tw-passagedata pid="92" name="Explore (-1, -2)" tags="" position="1950,4400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFA07A)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1yQ96CK9nwYteAXLTYxWoWz3L8c5KteHL&quot;&gt;]]]
-[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFA07A)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1TBcUP4u1pIjb-v3Pd-6_fCJGfxGNYtSG&quot;&gt;]]]
+[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFA07A)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1EG9KMeymD61S-iQcJKKnKinb51-TQimC&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 (text-colour:#87CEEB)[//Remember that souped-up probe the loyal recruit launched? Well, it was detected by a nearby pirate sloop hunting for easy prey in a nearby debris field.//]
@@ -1047,6 +1049,7 @@ This really isn&#39;t all that hard, (print: $player). You found:
 
 What would you like to do?
 (if: $lost is &quot;failed&quot;)[Submit another [[CM-008 Solution]]](if: $cadet is &quot;true&quot; and $CM008 is &quot;false&quot;)[Attempt mission [[CM-008]]]
+(if: $CM008 is &quot;true&quot;)[Submit your [[CM-008 Solution]]]
 Harvest trilithium [[Harvest (0, 2)]]
 Return to [[(0, 2)]]
 
@@ -2502,7 +2505,7 @@ Your current TC Vault level is: (text-color:#FA8072)[$T_Vault]
 [(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1Sqy6M-S4ioBVWc8nL9aO-y71EmbRdtYW&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Server Upgrade:&#39;&#39;] 
 
 (if: $server_recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[This item increases the processing power of shipboard AI bots, allowing 10% more resources to be mined. This item is stackable (8).
-This item costs 5000 QD and 5 TC]]](if: $server_recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
+This item costs 10000 QD and 2 TC]]](if: $server_recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
 Your current server level is: (text-color:#FA8072)[$server]
 
 [(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1izToye6da7WJ9wQZBI4-lnrzWHrk0VCP&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Pythagoraean Hero:&#39;&#39;] 
@@ -4895,6 +4898,7 @@ Congratulations, (print: $player), you found:
 
 
 What would you like to do?
+(if: $CM010 is &quot;true&quot;)[Submit your [[CM-010 Solution]]]
 (if: $cadet is &quot;true&quot; and $CM010 is &quot;false&quot;)[Accept mission [[CM-010]]]
 Harvest quaterium [[Harvest (4, 0)]]
 Return to [[(4, 0)]]
@@ -7170,7 +7174,7 @@ Return to [[(6, 0)]]
 (text-color:#00FF00)[**Upload a screenshot of this screen and upload it to Canvas. Code UUV3Z unlocks mission CM-002 in Canvas.**]</tw-passagedata><tw-passagedata pid="611" name="CM-003 Reward" tags="cadet" position="2050,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**CM-003 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1vyvJO-wLvKIhAuKwBu_OC44fqE8TYBEl/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $CM003 to &quot;complete&quot;)(if: $compact_generator is &quot;delivered&quot;)
+(set: $CM003 to &quot;complete&quot;)(set: $compact_generator to &quot;delivered&quot;)
 Well done, (print: $player)! You successfully completed mission CM-003! You&#39;re proving to be a capable member of the UESF. You&#39;re certainly catching the attention of the admiralty early in your career - great promotions await someone with your potential!
 
 You&#39;ve earned:
@@ -7185,7 +7189,7 @@ Return to [[(6, 0)]]
 (text-color:#00FF00)[**Upload a screenshot of this screen and upload it to Canvas. Code FGU2P unlocks mission CM-003 in Canvas.**]</tw-passagedata><tw-passagedata pid="612" name="CM-004 Reward" tags="cadet" position="2175,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**CM-004 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1vfrCSVcRPjyGhRFazxE418NnoUHWnGol/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $CM004 to &quot;complete&quot;)(if: $vaccine_moss is &quot;delivered&quot;)
+(set: $CM004 to &quot;complete&quot;)(set: $vaccine_moss to &quot;delivered&quot;)
 Well done, (print: $player)! You successfully completed mission CM-004! What would the colonists on Arveda III do without you?
 
 You&#39;ve earned:
@@ -7204,7 +7208,7 @@ Well done, (print: $player)! You successfully completed mission CM-005!
 
 You&#39;ve earned:
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1RN2XnJqUkyImXYl3AkhXE1IUI05970WH&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]](set: $XP to it + 200)200 XP
-[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1izToye6da7WJ9wQZBI4-lnrzWHrk0VCP&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]](set: $pythagoean_hero_recipe to &quot;true&quot;)Pythagorean Hero recipe
+[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1izToye6da7WJ9wQZBI4-lnrzWHrk0VCP&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]](set: $pythagorean_hero_recipe to &quot;true&quot;)Pythagorean Hero recipe
 
 
 What would you like to do?
@@ -8177,7 +8181,7 @@ You bow and clap both hands to your cheeks while making an &quot;O&quot; shape w
 What would you like to do?
 (if: $sash is &quot;true&quot;)[Return to [[Arveda III]]]
 (if: $sash is &quot;false&quot; and $moss_merchant &gt;4)[Accept the honorary title of [[Moss Merchant]]]
-Return to [[Arveda III]] </tw-passagedata><tw-passagedata pid="711" name="camphor moss" tags="locations" position="3225,5525" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=19aOQbj0jW3Oelpuse-WDZnmZq0pNRWr3&quot;&gt;]]]
+(else:)[Return to [[Arveda III]] ]</tw-passagedata><tw-passagedata pid="711" name="camphor moss" tags="locations" position="3225,5525" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=19aOQbj0jW3Oelpuse-WDZnmZq0pNRWr3&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 (if: $CM004 is &quot;true&quot;)[(set: $vaccine_moss to &quot;true&quot;)] (set: $weight to (either: 1,2,3,4))(if: $weight is 1)[(set: $sack to 0.859)](if: $weight is 2)[(set: $sack to 0.991)](if: $weight is 3)[(set: $sack to 0.903)](if: $weight is 4)[(set: $sack to 0.874)]
 You spend a pleasant couple of hours gathering a satchel full of moss from the planet&#39;s Golboni Flora Reserve. You take your bundle to the government agent for inspection before returning to your ship.
@@ -8448,7 +8452,7 @@ Your comms panel chirps and you answer it.
 
 The other ship cuts the comms before you can reply.
 
-You&#39;ve earned:
+$player, you&#39;ve earned:
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1RN2XnJqUkyImXYl3AkhXE1IUI05970WH&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]](set: $XP to it + 300)300 XP
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1zmasEn54o29hH7O1C5BExcj3RvtPzkLB&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]](set: $trilithium to it + 1.5)1.5 trilithium crystals
 
@@ -8471,7 +8475,7 @@ The smuggler&#39;s ship banks sharply to port and then engages its thrusters. Yo
 
 An encoded message pops up on your console. It&#39;s a set of coordinates: (-5, 7).
 
-You earn:
+$player, you&#39;ve earned:
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1RN2XnJqUkyImXYl3AkhXE1IUI05970WH&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]](set: $XP to it + 300)300 XP
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1zmasEn54o29hH7O1C5BExcj3RvtPzkLB&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]](set: $trilithium to it + 2)2 trilithium crystals
 
@@ -8499,7 +8503,6 @@ This area is a known hotbed of pirate and smuggling activity. Scanning the area 
 
 What would you like to do?
 (if: $scientists is &quot;lost&quot;)[Scan the [[outer planetoids]] in the same system housing AX7-Alpha-01 ]
-[[Scan (0, 8)]] for pirates
 Return to [[(0, 8)]]
 </tw-passagedata><tw-passagedata pid="800" name="(1, 8)" tags="junior" position="2350,1900" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (1, 8)**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
@@ -10592,17 +10595,49 @@ You shine your light down the passageway and frown in frustration. The passage o
 
 What do you want to do?
 
-Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1091" name="Call out" tags="" position="4500,5775" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1w97mVX_xzAWdS6Yf5Hnvk7jRlgvKZhu1&quot;&gt;]]]
+Return to the entrance to the [[caves]] and try a different path.</tw-passagedata><tw-passagedata pid="1091" name="Call out" tags="locations" position="4500,5775" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 &quot;Hello! Can anybody hear me?&quot; you shout.
 
 Suddenly, the rock walls surrounding you shudder. A deafening roar rushes toward you from the western passage, pushing a massive wave of dust ahead of it. Blind and deafened, you drop to the ground and cover your head in a futile effort to protect yourself from injury as the cave system collapses around you.
 
-The world around you goes [[black]] as your consciousness slips away.</tw-passagedata><tw-passagedata pid="1092" name="black" tags="" position="4625,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
+You fight off panic as you&#39;re trapped under what could be literal tonnes of rock. You try to move but you&#39;re pinned. You clear your throat to call out, but nothing comes out but a dusty cough.
+
+It appears your only hope is to be rescued by the scientists you were sent to rescue.
+
+As if summoned, you hear voices as the rubble starts to shift around you.
+
+&quot;Here!&quot; you cry. &quot;I&#39;m trapped down here!&quot;
+
+You hear frantic scrabbling as rocks are pulled away. You squint as a bright light hits you square in the eyes. You raise your hand to block the worst of it and open your mouth to thank your rescuers.
+
+The words die on your lips as you take in, not the familiar Spacefleet science jumpsuits but, the ecclectic stylings of space pirates.
+
+&quot;Wha--?&quot;
+[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1ILJT_fNpijFu2RdlVttgabrou7S9zxJV&quot;&gt;]]]
+You don&#39;t even get to form the whole word before one of the pirates raises an energy weapon and points it at your chest. 
+
+&quot;You&#39;re ours now, Spacefleet,&quot; she says as she pulls the trigger.
+
+Your body spasms as what feels like a thousand lightning bolts surge through and fry your nerve endings. The world around you goes [[black]] as your consciousness slips away.</tw-passagedata><tw-passagedata pid="1092" name="black" tags="" position="4625,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=16KgI9uXsrHCos_RDjkzlVdl5yvExQHyJ&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
-Rescued and imprisoned by pirates</tw-passagedata><tw-passagedata pid="1093" name="South " tags="" position="4500,6025" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XP5RP-3ot_if3d-XWeWtYHjh99gmRQ01&quot;&gt;]]]
+Your first thought as you return to awareness is, &#39;Why do they &#39;&#39;//always//&#39;&#39; have to shoot?&#39; 
+
+You rub your chest where the energy beam struck you. Your entire torso tingles like it&#39;s fallen asleep and you almost want to crawl out of your skin because it itches so much.
+
+You know you shouldn&#39;t whine and feel sorry for yourself, but those energy blasts //hurt//, dagnabit!
+
+After wallowing in self-pity for another twenty seconds you recall your Spacefleet training and begin to examine your surroundings more closely. You&#39;re clearly in a disused cargo storage room with what looks to be an old space portable toilet and some scrap cabling. 
+
+You note the absence of a door, but your hopes die as you approach and hear the unmistakable whine of a forcefield. You take a few steps back. You&#39;re in no mood to receive another dose of Pirate-inspired electroshock therapy.
+
+You look at the portable toilet and wonder how long you can wait before you&#39;ll be forced to use it. You contemplate lifting the lid, but think better of it - who knows what kind of terrible cleaners pirates might be?
+
+
+
+</tw-passagedata><tw-passagedata pid="1093" name="South " tags="" position="4500,6025" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XP5RP-3ot_if3d-XWeWtYHjh99gmRQ01&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 The cavern is empty.
@@ -10766,7 +10801,24 @@ The Fleet Admiral is NOT amused. Your ship and XP progress in Spacefleet has bee
 
 What do you want to do?
 
-Return to [[(0, 8)]] demoted, demoralized, and dejected.</tw-passagedata><tw-passagedata pid="1108" name="pirates" tags="" position="4900,5400" size="100,100"></tw-passagedata><tw-passagedata pid="1109" name="PvE Victory" tags="" position="5300,5400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#DC143C)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 250%;&quot;)[**VICTORY**]]]
+Return to [[(0, 8)]] demoted, demoralized, and dejected.</tw-passagedata><tw-passagedata pid="1108" name="pirates" tags="PVE" position="4900,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1hk_hZo35uFL_R6pxQ-tyQOcLaEAXtlJB&quot;&gt;]]]
+(text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**A fierce pirate cruiser emerges from behind the planetoid, weapons ready!**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1elVFPqKmn7EynqY-KhHOYIYB4KuKvGfk&quot;&gt;]]]
+(set: $pirate4 to &quot;true&quot;)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirates_shield to (either: 6,7,8))(set: $pirates_hull to (either:14,15,16))(set: $pirates_systems to (either:7,8,9))(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)
+A quick scan shows:
+
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+
+Fleeing is not an option. 
+
+You have $counter turns to incapacitate the ship. What do you do?
+
+Fire [[your lasers]]
+Fire [[your torpedoes]]
+[[Surrender]]
+</tw-passagedata><tw-passagedata pid="1109" name="PvE Victory" tags="" position="5200,5400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#DC143C)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 250%;&quot;)[**VICTORY**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#DC143C)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1o6OEWIUhKKUXaSDcbKD_XdLLYMNqd6Z1&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 (set: $PVEwin to it + 1)(set: $trilithium to it + it*75/100)(set: $quaterium to it + it*50/100)
@@ -10775,13 +10827,12 @@ Return to [[(0, 8)]] demoted, demoralized, and dejected.</tw-passagedata><tw-pas
 
 What do you want to do?
 
-(if: $JO001 is &quot;true&quot;)[Collect mission [[JO-001 Reward]]]
-(if: $pirate4 is &quot;true&quot;)[Return to [[(0, 8)]]</tw-passagedata><tw-passagedata pid="1110" name="Scan (0, 8)" tags="" position="2100,2000" size="100,100">
+(if: $JO001 is &quot;true&quot;)[Collect mission [[JO-001 Reward]]](if: $pirate4 is &quot;true&quot;)[Return to [[(0, 8)]]]</tw-passagedata><tw-passagedata pid="1110" name="Scan (0, 8)" tags="PVE" position="2100,2000" size="100,100">
 
-(set: $pirates4 to &quot;true&quot;)</tw-passagedata><tw-passagedata pid="1111" name="PvE Defeat" tags="" position="5300,5500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#778899)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 250%;&quot;)[**DEFEAT**]]]
+(if: $pirate4 is &quot;true&quot;)[normal scanning stuff](else:)[red alert pirate stuff]</tw-passagedata><tw-passagedata pid="1111" name="PvE Defeat" tags="" position="5200,5500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#778899)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 250%;&quot;)[**DEFEAT**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#778899)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=172Cedu2MKadPHkiI0TEsjx-Z8NYsHRKm&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $PVEloss to it + 1)(set: $trilithium to it - it*90/100)(set: $quaterium to it - it*75/100)
+(set: $PVEloss to it + 1)(set: $trilithium to it - it*90/100)(set: $quaterium to it - it*75/100)(set:$pirate4 to &quot;repair&quot;)
 
 Final Pirate Ship Stats:
 
@@ -10799,7 +10850,168 @@ Your Ship Stats:
 What do you want to do?
 
 (if: $JO001 is &quot;true&quot;)[Try fighting the [[pirates]] again]
-(if: $pirate4 is &quot;true&quot;)[Return to [[(0, 8)]]</tw-passagedata><tw-passagedata pid="1112" name="Harvest (-8, 12)" tags="" position="200,1000" size="100,100"></tw-passagedata></tw-storydata>
+(if: $pirate4 is &quot;repair&quot;)[Head to the [[nearest spacestation]] for repairs]</tw-passagedata><tw-passagedata pid="1112" name="Harvest (-8, 12)" tags="" position="200,1000" size="100,100"></tw-passagedata><tw-passagedata pid="1113" name="Surrender" tags="" position="5200,5600" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(set:$pirate4 to &quot;surrender&quot;)
+You wait patiently for the pirates to board your ship. You&#39;ve locked down all sensitive systems and essentially turned $AI into a fledgling 21st century chatbot incapable of actual thought.
+
+The airlock hisses open and three pirates step onto your ship, weapons drawn. 
+
+&quot;I&#39;m unarmed!&quot; you shout as you point to the weapons you placed out of reach on the floor. 
+
+The lead pirate snorts and rolls his eyes as if to suggest you&#39;d be dead if you&#39;d been armed, so don&#39;t get all proud about not being totally stupid.
+
+&quot;About negotiating the terms of release,&quot; you begin. &quot;You might think it&#39;s better to contact Fleet Admiral Angst, but I think you&#39;ll get a better deal if you contact Captain Locksley. He--&quot;
+
+&quot;Don&#39;t worry about any of that,&quot; the second pirate says, as she raises her energy weapon and points it at your chest. &quot;We&#39;ve got it all planned out.&quot;
+[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#F0FFFF)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1ILJT_fNpijFu2RdlVttgabrou7S9zxJV&quot;&gt;]]]
+She fires before you can form the words to ask what the plan is, and the world around you goes [[black]] as your body falls to the ground, stunned and unconscious.</tw-passagedata><tw-passagedata pid="1114" name="nearest spacestation" tags="" position="8025,475" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1ZdHQQhnhkWp6lcNKuRM1D9z1GJAHn5Su&quot;&gt;]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+The Chief Engineer scowls as he runs through the list of repairs with you. 
+
+Honestly, $AI does so much of running your ship for you, you really had no idea how much could go wrong with it - nor how much repairs could cost.
+
+You wince as the engineer gives you his price estimate:
+
+(set: $trilithium to it - it*0.6)$trilithium trilithium crystals
+(set: $quaterium to it - it*0.8)$quaterium quaterium dioxide
+
+You&#39;ll have to do some serious mining to make up for the loss of resources, but even that&#39;s better than having to face the Fleet Admiral and tell her you broke one of her expensive ships.
+
+You pay for the repairs.
+
+(if:$pirate4 is &quot;repair&quot;)[Return to [[SSA-006]]]</tw-passagedata><tw-passagedata pid="1115" name="your lasers" tags="" position="5000,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+Your forward viewscreen flares bright red as your quatron lasers flash across the gap between you and the pirates. They may not be the most powerful weapons, but when they hit an enemy ship&#39;s shields, they cut through with surgical precision.
+
+(text-color:orange)[Fire quatron lasers:] (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
+(set: $dmg to $laser_hit)
+Your ship hit the enemy $target! 
+
+(if: $target is &quot;shields&quot;)[(set: $pirates_shield to it - $dmg)](if: $target is &quot;hull&quot;)[(text-color:cyan)[//Oof! Too bad! Your lasers do no damage to the hull. The pirate ship remains at full strength!//]](if: $target is &quot;systems&quot;)[(text-color:cyan)[//With those shields in place, your lasers do no damage to the ship&#39;s systems. The pirate ship remains at full strength!//]]
+
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+
+(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pstarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $ps_hit damage to $pstarget! //(set:$shield to it - $ps_hit)]](if: $pstarget is &quot;your hull&quot;)[(set:$hull to it - $ps_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$pstarget is &quot;your systems&quot;)[(set:$systems to it - $ps_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $pstarget!//]]
+
+
+(text-color:yellow)[Shield Strength:] $shield
+(text-color:orange)[Hull Strength:] $hull
+(text-color:blue)[Systems Function:] $systems
+
+(text-color:red)[You have $counter turns remaining.]
+
+(if: $pirates_shield &lt;= 0)[Enemy shields are down! 
+What do you want to do?
+Target the [[pirate hull]]
+Target the [[pirate systems]]](else:)[We need to destroy the pirate&#39;s shields if we want to incapacitate them!
+What do you want to do?
+Fire [[your lasers]]
+Fire [[your torpedoes]]]
+[[Surrender]]</tw-passagedata><tw-passagedata pid="1116" name="pirate hull" tags="" position="5100,5500" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to it)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)]
+
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+
+You have $counter turns to incapacitate the ship. What do you do?
+
+Fire[[ your lasers]]
+Fire[[ your torpedoes]]
+[[Surrender]]</tw-passagedata><tw-passagedata pid="1117" name="pirate systems" tags="" position="5000,5500" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to it)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)]
+
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+
+You have $counter turns to incapacitate the ship. What do you do?
+
+Fire[[ your lasers]]
+Fire[[ your torpedoes]]
+[[Surrender]]</tw-passagedata><tw-passagedata pid="1118" name="your torpedoes" tags="" position="5100,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
+(set: $dmg to $torpedo_hit)
+Your ship hit the enemy $target! 
+
+(if: $target is &quot;shields&quot;)[(set: $pirates_shield to it - $dmg*10/20)](if: $target is &quot;hull&quot;)[(set: $pirates_hull to it - $dmg)](if: $target is &quot;systems&quot;)[(set: $pirates_systems to it - $dmg*10/20)]
+
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $ptarget! (set:$shield to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull to it - $ps_hit)The pirate&#39;s weapons damage $pstarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
+
+(text-color:yellow)[Shield Strength:] $shield
+(text-color:orange)[Hull Strength:] $hull
+(text-color:blue)[Systems Function:] $systems
+
+(text-color:red)[You have $counter turns remaining.]
+
+(if: $pirates_shield &lt;= 0)[Enemy shields are down! 
+What do you want to do?
+Target the [[pirate hull]]
+Target the [[pirate systems]]]
+(else:)[We need to destroy the pirate&#39;s shields if we want to incapacitate them!
+What do you want to do?
+Fire [[your lasers]]
+Fire [[your torpedoes]]]
+[[Surrender]]</tw-passagedata><tw-passagedata pid="1119" name=" your lasers" tags="" position="5000,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+Fire quatron lasers: (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
+(set: $dmg to $laser_hit)
+Your ship hit the enemy $target! 
+
+(if: $target is &quot;hull&quot;)[(set: $pirates_hull to it - $dmg*10/20)](if: $target is &quot;systems&quot;)[(set: $pirates_systems to it - $dmg)]
+
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $pstarget! (set:$shield to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
+
+(text-color:yellow)[Shield Strength:] $shield
+(text-color:orange)[Hull Strength:] $hull
+(text-color:blue)[Systems Function:] $systems
+
+(text-color:red)[You have $counter turns remaining.]
+
+(if: $pirates_hull &lt;= 0 or $pirates_systems &lt;= 0)[(go-to:&quot;PvE Victory&quot;)](else:)[We need to destroy the pirate&#39;s hull or systems if we want to incapacitate them!
+What do you want to do?
+Fire[[ your lasers]]
+Fire[[ your torpedoes]]
+[[Surrender]]]</tw-passagedata><tw-passagedata pid="1120" name=" your torpedoes" tags="" position="5100,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5)*$torpedo))$torpedo_hit 
+(set: $dmg to $torpedo_hit)
+Your ship hit the enemy $target! 
+
+(if: $target is &quot;hull&quot;)[(set: $pirates_hull to it - $dmg)](if: $target is &quot;systems&quot;)[(set: $pirates_systems to it - $dmg*10/20)]
+
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $pstarget! (set:$shield to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
+
+(text-color:yellow)[Shield Strength:] $shield
+(text-color:orange)[Hull Strength:] $hull
+(text-color:blue)[Systems Function:] $systems
+
+(text-color:red)[You have $counter turns remaining.]
+
+(if: $pirates_hull &lt;= 0 or $pirates_systems &lt;= 0)[(go-to:&quot;PvE Victory&quot;)](else:)[We need to destroy the pirate&#39;s hull or systems if we want to incapacitate them!
+What do you want to do?
+Fire[[ your lasers]]
+Fire[[ your torpedoes]]
+[[Surrender]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
@@ -10821,4 +11033,3 @@ h(Math,"atanh",xr.atanh,Math.atanh(1e-300)===0);h(Math,"tanh",xr.tanh,Math.tanh(
 
 </body>
 </html>
-
