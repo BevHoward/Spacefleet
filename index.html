@@ -2508,7 +2508,7 @@ Your current TC Vault level is: (text-color:#FA8072)[$T_Vault]
 This item costs 10000 QD and 2 TC]]](if: $server_recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
 Your current server level is: (text-color:#FA8072)[$server]
 
-[(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1izToye6da7WJ9wQZBI4-lnrzWHrk0VCP&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Pythagoraean Hero:&#39;&#39;] 
+[(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1izToye6da7WJ9wQZBI4-lnrzWHrk0VCP&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Pythagorean Hero:&#39;&#39;] 
 
 (if: $pythagorean_hero_recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[This item grants you 200 space credits when produced at a UESF space station. This item costs 1 Quantum Engine Efficiency and 1 Server Upgrade.]]](if: $pythagorean_hero_recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
 
@@ -2560,6 +2560,7 @@ You step out of the docking ring and into the bustling main thoroughfare. Sure, 
 You close your eyes and inhale deeply. The pre-packaged freeze-dried pizza in your ship&#39;s stores pales in comparison to the mouth-watering aromas wafting from the marketplace.
 
 What would you like to do?
+Collect mission [[CM-005 Reward]]
 (if: $CM005 is &quot;true&quot; and $arrays &gt; 4)[Collect mission [[CM-005 Reward]]]
 (if: $CM007 is &quot;true&quot; and $pirates &gt; 4)[Collect mission [[CM-007 Reward]]]
 Visit a [[food vendor]]
