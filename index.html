@@ -7268,7 +7268,7 @@ Return to [[(-1, -4)]]
 (text-color:yellow)[**Take a screenshot of the above text and upload it to mission CM-009 in Canvas. Code GUV9O unlocks the mission.**]</tw-passagedata><tw-passagedata pid="617" name="CM-012 Reward" tags="cadet" position="3175,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**CM-012 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1BN_MGhNIcCDbjCV4e-EbqHtYA5CXJhzx/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(set: $junior to &quot;true&quot;)
+(set: $junior to &quot;true&quot;)(set: $CM012 to &quot;complete&quot;)
 You are a true completionist, $player. The UESF is impressed with your perseverance and attention to detail.
 
 Congratulations! You have earned:
@@ -8316,9 +8316,9 @@ Congratulations on your successful upgrade! Now, get out there and keep our terr
 (set: $shield to it + 2)(set: $hull to it + 6)(set: $systems to it + 1)
 Return to [[Dock]]
 </tw-passagedata><tw-passagedata pid="731" name="Mining Laser" tags="" position="7500,250" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1cNyDvzUAxVJCr3bG65PO_359xpzQ_vGN&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if: $level is &quot;yes&quot;)[(set: $laser to 1)]
 (if:$Q_Vault is &lt; 1 or $server is &lt; 1)[Sorry, Cadet, but you can&#39;t afford this upgrade yet.]
-(if: $Q_Vault is &gt;0 and $server is &gt;0)[(set: $level to (prompt: &quot;Upgrade lasers? yes or no&quot;, &quot;no&quot;))(if: $level is &quot;yes&quot;)[(set: $Q_Vault to it - 1)(set: $server to it - 1)(set: $laser to 1) You&#39;re all set! Enjoy true firepower, Cadet! Just don&#39;t go around blasting things you shouldn&#39;t...]
+(if: $Q_Vault is &gt;0 and $server is &gt;0)[(set: $level to (prompt: &quot;Upgrade lasers? yes or no&quot;, &quot;no&quot;))(if: $level is &quot;yes&quot;)[(set: $Q_Vault to it - 1)(set: $server to it - 1) You&#39;re all set! Enjoy true firepower, Cadet! Just don&#39;t go around blasting things you shouldn&#39;t...]
 (else-if: $level is &quot;no&quot;)[No worries, Cadet. Come back whenever you&#39;re ready to make the purchase.]
 (else:)[You didn&#39;t enter either &#39;&#39;yes&#39;&#39; or &#39;&#39;no&#39;&#39; using lower case letters]]
 
@@ -8339,9 +8339,9 @@ This will be a dangerous mission. Good luck!
 What do you want to do?
 
 Return to [[(-4, 3)]]</tw-passagedata><tw-passagedata pid="733" name="Science Probe" tags="" position="7625,250" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1uSqBg8ccU0C0Eu3rtVcnxYTJr8XcmiLm&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if: $level is &quot;yes&quot;)[(set: $torpedo to 1)]
 (if:$T_Vault is &lt; 2)[Sorry, Cadet, but you can&#39;t afford this upgrade yet.]
-(if: $T_Vault is &gt;1)[(set: $level to (prompt: &quot;Upgrade probe launchers to torpedo bays? yes or no&quot;, &quot;no&quot;))(if: $level is &quot;yes&quot;)[(set: $T_Vault to it - 2)(set: $torpedo to 1) You&#39;re all set! Just don&#39;t mix up the probe and torpedo buttons - you don&#39;t want to end up like Ensign McDougal.]
+(if: $T_Vault is &gt;1)[(set: $level to (prompt: &quot;Upgrade probe launchers to torpedo bays? yes or no&quot;, &quot;no&quot;))(if: $level is &quot;yes&quot;)[(set: $T_Vault to it - 2)You&#39;re all set! Just don&#39;t mix up the probe and torpedo buttons - you don&#39;t want to end up like Ensign McDougal.]
 (else-if: $level is &quot;no&quot;)[No worries, Cadet. Come back whenever you&#39;re ready to make the purchase.]
 (else:)[You didn&#39;t enter either &#39;&#39;yes&#39;&#39; or &#39;&#39;no&#39;&#39; using lower case letters]]
 
@@ -10474,7 +10474,7 @@ Return to (link-goto: $name)</tw-passagedata><tw-passagedata pid="1082" name="Se
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 (if:$quaterium is &lt; 10000 or $trilithium is &lt; 2)[Sorry, but you can&#39;t afford this upgrade yet.]
 (if: $server is 10)[Sorry, you cannot craft any more of this item.]
-(if: $server is &lt; 10 and $quaterium is &gt; 9999 and $trilithium is &gt; 1.9)[(set: $upgrade to (prompt: &quot;Purchase Server Upgrade? yes or no&quot;, &quot;no&quot;))(if: $upgrade is &quot;yes&quot;)[(set: $server to it + 1)(set: $quaterium to it - 10000)(set: $trilithium to it - 2) Ypur servers are more powerful than before! Enjoy!]
+(if: $server is &lt; 10 and $quaterium is &gt; 9999 and $trilithium is &gt; 1.9)[(set: $upgrade to (prompt: &quot;Purchase Server Upgrade? yes or no&quot;, &quot;no&quot;))(if: $upgrade is &quot;yes&quot;)[(set: $server to it + 1)(set: $quaterium to it - 10000)(set: $trilithium to it - 2) Your servers are more powerful than before! Enjoy!]
 (else-if: $upgrade is &quot;no&quot;)[No worries. Come back whenever you&#39;re ready to make the purchase.]
 (else:)[You didn&#39;t enter either &#39;&#39;yes&#39;&#39; or &#39;&#39;no&#39;&#39; using lower case letters]]
 
