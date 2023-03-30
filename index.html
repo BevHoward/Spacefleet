@@ -4019,6 +4019,7 @@ You found:
 
 What would you like to do?
 (if: $cadet is &quot;true&quot; and $CM012 is &quot;false&quot;)[Accept mission [[CM-012]]]
+(if: $green is 11)[Collect [[CM-012 Reward]]]
 Harvest trilithium [[Harvest (-4, 3)]]
 Return to [[(-4, 3)]]
 
@@ -7080,7 +7081,7 @@ According to our records, you have completed (text-colour:yellow)[$green] Cadet 
 
 What would you like to do?
 (if: $green is 11)[Collect [[CM-012 Reward]]]
-Return to [[(-4, 3)]]</tw-passagedata><tw-passagedata pid="606" name="CM-013" tags="cadet" position="3300,0" size="100,100">(if: $player is &quot;sira&quot;)[(set: $Q_Vault to 1)](if: $player is &quot;sira&quot;)[(set: $T_Vault to 1)](align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**Cadet Mission 013**]]]
+Return to [[(-4, 3)]]</tw-passagedata><tw-passagedata pid="606" name="CM-013" tags="cadet" position="3300,0" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**Cadet Mission 013**]]]
 (set: $CM013 to &quot;true&quot;)(if: $T_Vault is &gt;= 1 and $Q_Vault is &gt;= 1)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(text-color:yellow)[(css: &quot;font-size: 200%;&quot;)[**WARNING:**]]
 (text-color:red)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 200%;&quot;)[**Do not attempt this mission unless you&#39;ve upgraded both your lasers and torpedoes (CM-009 and CM-011).**]]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1wBjLsKu7SOnCoPRRZJ1W3mMF4qlfY3jK/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
@@ -7092,12 +7093,13 @@ Our tactical instructors have altered the debris so it has basic shielding, but 
 (text-color:red)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 200%;&quot;)[**Do not attempt this mission unless you&#39;ve upgraded both your lasers and torpedoes (CM-009 and CM-011).**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#87CEEB)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1o5ICccP6_diTxO24cG1-nbUg-JzbPzFh/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-I&#39;m sorry, Cadet, you need to upgrade your lasers and missiles before attempting this mission.]
+I&#39;m sorry, $player, you need to upgrade your lasers and missiles before attempting this mission.]
 
 
 What do you want to do?
 (if: $T_Vault is &gt;= 1 and $Q_Vault is &gt;= 1)[Participate in the [[Live Test]]]
-Return to [[(5, -2)]]</tw-passagedata><tw-passagedata pid="607" name="CM-014" tags="cadet" position="3425,0" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**Cadet Mission 013**]]]
+Return to [[(5, -2)]]
+(if: $player is &quot;sira&quot;)[Participate in the [[Live Test]]]</tw-passagedata><tw-passagedata pid="607" name="CM-014" tags="cadet" position="3425,0" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**Cadet Mission 013**]]]
 (set: $CM014 to &quot;true&quot;)(if: $T_Vault is &gt;= 1 and $Q_Vault is &gt;= 1)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(text-color:yellow)[(css: &quot;font-size: 200%;&quot;)[**WARNING:**]]
 (text-color:red)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 200%;&quot;)[**Do not attempt this mission unless you&#39;ve upgraded both your lasers and torpedoes (CM-009 and CM-011).**]]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1EUtj6rARxXvKtmqYvX-fpnFG_CkIg52G/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
