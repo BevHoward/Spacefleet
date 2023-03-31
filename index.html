@@ -2537,12 +2537,12 @@ Your current shield upgrade level is: (text-color:#FA8072)[$shield_upgrade]
 [(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=16EmXZOOWYCBxwTbtGYk1hJ0gvP4Ss15X&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Armor Plating Level 1:&#39;&#39;] 
 (if: $armour_plating_1_recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[This item adds triple the item&#39;s level to the base value of your ship&#39;s hull. This item is upgradeable with further recipes.
 This item costs 15000 QD and 3 TC]]](if: $armour_plating_1_recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
-Your current shield upgrade level is: (text-color:#FA8072)[$hull_upgrade]
+Your current hull upgrade level is: (text-color:#FA8072)[$hull_upgrade]
 
 [(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1x88Cj2c80iFzByPgn-XlQz7LvngAFKLu&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Systems Upgrade Level 1:&#39;&#39;] 
 (if: $systems_upgrade_1_recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[This item adds double the item&#39;s level to the base value of your ship&#39;s systems. This item is upgradeable with further recipes.
 This item costs 10000 QD and 1 TC]]](if: $systems_upgrade_1_recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
-Your current shield upgrade level is: (text-color:#FA8072)[$systems_upgrade]
+Your current systems upgrade level is: (text-color:#FA8072)[$systems_upgrade]
 
 [(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1mrhc_RyMQUFbTvaxq4ZzxXo32qNNWKFX&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Level 2 Ship Hull:&#39;&#39;] 
 (if: $L2_Ship_Recipe is &quot;complete&quot;)[(text-colour: yellow)[You have already used this recipe.]] (if: $L2_Ship_Recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[This recipe allows you to upgrade your ship to a level two hull.
@@ -5372,7 +5372,7 @@ Travel to [[(6, -2)]]
 Congratulations, (print: $player), you found:
 
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1nht-zznF5Et3dLlhIm-qsiiTtKwqkkik&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]]quaterium dioxide mining site
-(if: $cadet is &quot;true&quot; and $CM013 is &quot;false&quot;)[CM-013]
+(if: $cadet is &quot;true&quot; and $CM013 is &quot;false&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1qi4cpd8BMNFNKb4hZ59zsUkovKXZPPlf&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]CM-013]
 
 
 
@@ -7729,7 +7729,7 @@ What do you want to do?
 (if: $T_Vault is &gt;= 1 and $Q_Vault is &gt;= 1)[Participate in the [[Live Test]]]
 Return to [[(5, -2)]]
 (if: $player is &quot;sira&quot;)[Participate in the [[Live Test]]](if: $player is &quot;Wintery&quot;)[Participate in the [[Live Test]]](if: $player is &quot;Bigbrainbillybob&quot;)[Participate in the [[Live Test]]]</tw-passagedata><tw-passagedata pid="607" name="CM-014" tags="cadet" position="3425,0" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**Cadet Mission 013**]]]
-(set: $CM014 to &quot;true&quot;)(if: $T_Vault is &gt;= 1 and $Q_Vault is &gt;= 1)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(text-color:yellow)[(css: &quot;font-size: 200%;&quot;)[**WARNING:**]]
+(set: $CM014 to &quot;true&quot;)(if: $laser is &gt;= 1 and $torpedo is &gt;= 1)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(text-color:yellow)[(css: &quot;font-size: 200%;&quot;)[**WARNING:**]]
 (text-color:red)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 200%;&quot;)[**Do not attempt this mission unless you&#39;ve upgraded both your lasers and torpedoes (CM-009 and CM-011).**]]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1EUtj6rARxXvKtmqYvX-fpnFG_CkIg52G/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
@@ -11510,17 +11510,17 @@ What would you like to do?
 (set: $name to (history:)&#39;s last)
 Return to (link-goto: $name)</tw-passagedata><tw-passagedata pid="1078" name="Armor Level One" tags="" position="7750,500" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=16EmXZOOWYCBxwTbtGYk1hJ0gvP4Ss15X&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if: $armour_up is &quot;Yes&quot;)[(set: $quaterium to it - 15000)](if: $armour_up is &quot;Yes&quot;)[(set: $trilithium to it - 3)](if: $armour_up is &quot;Yes&quot;)[(set: $armour_plating_1_recipe to &quot;complete&quot;)]
+(if: $armour_up is &quot;Yes&quot;)[(set: $quaterium to it - 15000)](if: $armour_up is &quot;Yes&quot;)[(set: $trilithium to it - 3)](if: $armour_up is &quot;Yes&quot;)[(set: $armour_plating_1_recipe to &quot;complete&quot;)](set: $hull_upgrade to 1)
 Congratulations on your successful upgrade! No one is going to be punching a hole in your hull any time soon!
 (set: $hull to it + 3)
 Return to [[SSA-006]]</tw-passagedata><tw-passagedata pid="1079" name="Shields Level One" tags="" position="7750,375" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=19viHotPo4rZxLJ8V8-wsyC_Izlq0xcev&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $shield to it + 2)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $shield to it + 2)(set: $shield_upgrade to 1)
 (set: $quaterium to it - 12000)(set: $trilithium to it - 2)](set: $shields_up_1_recipe to &quot;complete&quot;)
 Congratulations on your successful upgrade! Those pirates should have a much harder time breaking through your shields now!
 
 Return to [[SSA-006]]</tw-passagedata><tw-passagedata pid="1080" name="Systems Level One" tags="" position="7750,625" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1x88Cj2c80iFzByPgn-XlQz7LvngAFKLu&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if: $systems_up is &quot;Yes&quot;)[(set: $quaterium to it - 10000)](if: $systems_up is &quot;Yes&quot;)[(set: $trilithium to it - 1)](if: $systems_up is &quot;Yes&quot;)[(set: $systems_upgrade_1_recipe to &quot;complete&quot;)]
+(if: $systems_up is &quot;Yes&quot;)[(set: $quaterium to it - 10000)](if: $systems_up is &quot;Yes&quot;)[(set: $trilithium to it - 1)](if: $systems_up is &quot;Yes&quot;)[(set: $systems_upgrade_1_recipe to &quot;complete&quot;)](set: $systems_upgrade to 1)
 Congratulations on your successful upgrade! Your computing power will keep life support and all essential systems functioning, even in the toughest battles now!
 (set: $systems to it + 2)
 Return to [[SSA-006]]</tw-passagedata><tw-passagedata pid="1081" name="Pythagorean Hero" tags="" position="7500,500" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1izToye6da7WJ9wQZBI4-lnrzWHrk0VCP&quot;&gt;]]]
