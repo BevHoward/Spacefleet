@@ -80,8 +80,7 @@ Return to [[Earth, 2235]]</tw-passagedata><tw-passagedata pid="3" name="Start" t
 (set: $CM001 to &quot;false&quot;)(set: $CM002 to &quot;false&quot;)(set: $CM003 to &quot;false&quot;)(set: $CM004 to &quot;false&quot;)(set: $CM005 to &quot;false&quot;)(set: $CM006 to &quot;false&quot;)(set: $CM007 to &quot;false&quot;)(set: $CM008 to &quot;false&quot;)(set: $CM009 to &quot;false&quot;)(set: $CM010 to &quot;false&quot;)(set: $CM011 to &quot;false&quot;)(set: $CM012 to &quot;false&quot;)(set: $CM013 to &quot;false&quot;)(set: $CM014 to &quot;false&quot;)(set: $CM015 to &quot;false&quot;)(set: $arrays to 0)(set: $pirates to 0)
 
 (set: $trader to &quot;false&quot;)(set: $mule to &quot;none&quot;)(set: $sash to &quot;false&quot;)(set: $AI to &quot;Quantum AI Interface&quot;)
-
-(if: $player is &quot;sira&quot;)[(set: $laser to 1)]</tw-passagedata><tw-passagedata pid="4" name="Footer" tags="footer" position="100,200" size="100,100">
+</tw-passagedata><tw-passagedata pid="4" name="Footer" tags="footer" position="100,200" size="100,100">
 
 
 &lt;span style=&quot;font-size: 70%&quot;&gt;
@@ -1055,6 +1054,7 @@ This really isn&#39;t all that hard, (print: $player). You found:
 What would you like to do?
 (if: $lost is &quot;failed&quot;)[Submit another [[CM-008 Solution]]](if: $cadet is &quot;true&quot; and $CM008 is &quot;false&quot;)[Attempt mission [[CM-008]]]
 (if: $CM008 is &quot;true&quot;)[Submit your [[CM-008 Solution]]]
+(if:$player is &quot;Vernal Equinox&quot;)[Collect mission [[CM-008 Reward]]]
 Harvest trilithium [[Harvest (0, 2)]]
 Return to [[(0, 2)]]
 
@@ -2499,13 +2499,13 @@ Keep the transmission a [[secret]]</tw-passagedata><tw-passagedata pid="179" nam
 
 (if: $Q_Vault_Recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[//This item allows the player to carry and store 10% more quaterium dioxide on their ship. This item is stackable (10) and each level adds 10% of the ship&#39;s base QD storage to the total.
 This item costs 1000 QD and 5 TC//]]](if: $Q_Vault_Recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
-Your current QD Vault level is: (text-color:#FA8072)[$Q_Vault]
+Quaterium Vaults in your inventory: (text-color:#FA8072)[$Q_Vault]
 
 [(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1zmasEn54o29hH7O1C5BExcj3RvtPzkLB&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Trilithium Vault:&#39;&#39;] 
 
 (if: $T_Vault_Recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[This item allows the player to carry and store one more trilithium crystal on their ship. This item is stackable (10).
 This item costs 5000 QD and 5 TC]]](if: $T_Vault_Recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
-Your current TC Vault level is: (text-color:#FA8072)[$T_Vault]
+Trilithium Vaults in your inventory: (text-color:#FA8072)[$T_Vault]
 
 [(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1Sqy6M-S4ioBVWc8nL9aO-y71EmbRdtYW&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Server Upgrade:&#39;&#39;] 
 
@@ -7920,7 +7920,7 @@ What would you like to do?
 
 Return to [[(-4, 3)]]
 
-(text-color:yellow)[**Take a screenshot of the above text and upload it to mission CM-012 in Canvas. Code DDR5T unlocks the mission.**]</tw-passagedata><tw-passagedata pid="618" name="Training Test" tags="cadet" position="3425,100" size="100,100">(if: $player is &quot;sira&quot;)[(set: $shield to 10)(set: $hull to 20)(set: $systems to 8)] (text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1HrfBwfnSFqfBrNkUboZaZy-HBtFYCf_6&quot;&gt;]]]
+(text-color:yellow)[**Take a screenshot of the above text and upload it to mission CM-012 in Canvas. Code DDR5T unlocks the mission.**]</tw-passagedata><tw-passagedata pid="618" name="Training Test" tags="cadet" position="3425,100" size="100,100">(if: $player is &quot;sira&quot;)[(set: $laser to 1)](if: $player is &quot;sira&quot;)[(set: $shield to 10)(set: $hull to 20)(set: $systems to 8)] (text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1HrfBwfnSFqfBrNkUboZaZy-HBtFYCf_6&quot;&gt;]]]
 (text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**Sensors pick up a small armed craft closing in on your position. Weapons are armed - it&#39;s coming in hot!**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1R4m3h2g9MhWz_dqToh_-Ai_YxNgN6gQN&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $training_shield to 5)(set: $training_hull to 10)(set: $training_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)(set:$shield_pve to $shield)(set:$hull_pve to $hull)(set:$systems_pve to $systems)
 A quick scan shows:
@@ -8883,7 +8883,9 @@ You have entered: (print: $solution2)
 
 (if: $solution2 is &quot;Help! Can anyone hear me? My ship lost power and is drifting. I&#39;ve lost navigation, and I don&#39;t even know if I&#39;m in my own space any more! Please, if you can hear me, find me or send help!&quot;)[(set: $lost to &quot;decoded&quot;)[Message decoded with 100% accuracy]](else:)[Solution accuracy is less than 100% and results cannot be verified. Submission rejected.]
 
-(if: $lost is &quot;decoded&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#87CEEB)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1dBYR4perXNCBcCO_O3GEHlKdxBSYrffi/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]Well done, $player! Your cipher skills truly are superb!](else:)[(set: $lost to &quot;failed&quot;)[Return to [[CM-008]]]]
+(if: $lost is &quot;decoded&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#87CEEB)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1dBYR4perXNCBcCO_O3GEHlKdxBSYrffi/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]Well done, $player! Your cipher skills truly are superb!
+
+Collect mission [[CM-008 Reward]]](else:)[(set: $lost to &quot;failed&quot;)[Return to [[CM-008]]]]
 
 Return to [[(0, 2)]]</tw-passagedata><tw-passagedata pid="718" name="CM-008 Reward" tags="cadet" position="2675,200" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**CM-008 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1gADXykIhX5JD7S-iF5MQzXipsDSj2ocO/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
@@ -8898,7 +8900,7 @@ You&#39;ve earned:
 Be sure to stop by SSA3 when you&#39;re ready to upgrade your ship!
 
 What would you like to do?
-Return to [[(5, -2)]]
+Return to [[(0, 2]]
 
 (text-color:yellow)[**Use code PAL3L to unlock mission CM-008 in Canvas.**]</tw-passagedata><tw-passagedata pid="719" name="Dockyard" tags="locations" position="4100,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1ZdHQQhnhkWp6lcNKuRM1D9z1GJAHn5Su&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
@@ -12540,7 +12542,7 @@ Congratulations, $player, you found 0.5 trilithium!
 (else:)[(set: $trilithium to $trilithium)]
 You now have (set: $trilithium to (floor: 100*it)/100)$trilithium trilithium crystals.
 {(if: $ship &gt; 9)[(set: $max_trilithium to 20)](else-if: $ship &gt; 8)[(set: $max_trilithium to 19)](else-if: $ship &gt; 7)[(set: $max_trilithium to 18)](else-if: $ship &gt; 6)[(set: $max_trilithium to 13)](else-if: $ship &gt; 5)[(set: $max_trilithium to 12)](else-if: $ship &gt; 4)[(set: $max_trilithium to 11)](else-if: $ship &gt; 3)[(set: $max_trilithium to 10)](else-if: $ship &gt; 2)[(set: $max_trilithium to 6)](else:)[(set: $trilithium to $trilithium)]}
-</tw-passagedata><tw-passagedata pid="1193" name="Harvest (8, 3)" tags="" position="4200,3250" size="100,100"></tw-passagedata><tw-passagedata pid="1194" name="Harvest (7, 2)" tags="" position="3950,3500" size="100,100"></tw-passagedata><tw-passagedata pid="1195" name="Harvest (-7, 1)" tags="" position="450,3750" size="100,100"></tw-passagedata><tw-passagedata pid="1196" name="Harvest (7, 1)" tags="" position="3950,3750" size="100,100"></tw-passagedata><tw-passagedata pid="1197" name="Harvest (-7, 0)" tags="" position="450,4000" size="100,100"></tw-passagedata><tw-passagedata pid="1198" name="Harvest (9, -1)" tags="" position="4450,4250" size="100,100"></tw-passagedata><tw-passagedata pid="1199" name="Harvest (11, -1)" tags="" position="4950,4250" size="100,100"></tw-passagedata><tw-passagedata pid="1200" name="Harvest (8, -2)" tags="" position="4200,4500" size="100,100"></tw-passagedata><tw-passagedata pid="1201" name="Harvest (-5, -3)" tags="" position="950,4750" size="100,100"></tw-passagedata><tw-passagedata pid="1202" name="Harvest (10, -3)" tags="" position="4700,4750" size="100,100"></tw-passagedata><tw-passagedata pid="1203" name="Harvest (13, -3)" tags="" position="5450,4750" size="100,100"></tw-passagedata><tw-passagedata pid="1204" name="Harvest (5, -4)" tags="" position="3450,5000" size="100,100"></tw-passagedata><tw-passagedata pid="1205" name="Harvest (-8, -5)" tags="" position="200,5250" size="100,100"></tw-passagedata><tw-passagedata pid="1206" name="Harvest (1, -5)" tags="" position="2450,5250" size="100,100"></tw-passagedata><tw-passagedata pid="1207" name="Harvest (8, -5)" tags="" position="4200,5250" size="100,100"></tw-passagedata><tw-passagedata pid="1208" name="Harvest (11, -5)" tags="" position="4950,5250" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="1193" name="Harvest (8, 3)" tags="" position="4200,3250" size="100,100"></tw-passagedata><tw-passagedata pid="1194" name="Harvest (7, 2)" tags="" position="3950,3500" size="100,100"></tw-passagedata><tw-passagedata pid="1195" name="Harvest (-7, 1)" tags="" position="450,3750" size="100,100"></tw-passagedata><tw-passagedata pid="1196" name="Harvest (7, 1)" tags="" position="3950,3750" size="100,100"></tw-passagedata><tw-passagedata pid="1197" name="Harvest (-7, 0)" tags="" position="450,4000" size="100,100"></tw-passagedata><tw-passagedata pid="1198" name="Harvest (9, -1)" tags="" position="4450,4250" size="100,100"></tw-passagedata><tw-passagedata pid="1199" name="Harvest (11, -1)" tags="" position="4950,4250" size="100,100"></tw-passagedata><tw-passagedata pid="1200" name="Harvest (8, -2)" tags="" position="4200,4500" size="100,100"></tw-passagedata><tw-passagedata pid="1201" name="Harvest (-5, -3)" tags="" position="950,4750" size="100,100"></tw-passagedata><tw-passagedata pid="1202" name="Harvest (10, -3)" tags="" position="4700,4750" size="100,100"></tw-passagedata><tw-passagedata pid="1203" name="Harvest (13, -3)" tags="" position="5450,4750" size="100,100"></tw-passagedata><tw-passagedata pid="1204" name="Harvest (5, -4)" tags="" position="3450,5000" size="100,100"></tw-passagedata><tw-passagedata pid="1205" name="Harvest (-8, -5)" tags="" position="200,5250" size="100,100"></tw-passagedata><tw-passagedata pid="1206" name="Harvest (1, -5)" tags="" position="2450,5250" size="100,100"></tw-passagedata><tw-passagedata pid="1207" name="Harvest (8, -5)" tags="" position="4200,5250" size="100,100"></tw-passagedata><tw-passagedata pid="1208" name="Harvest (11, -5)" tags="" position="4950,5250" size="100,100"></tw-passagedata><tw-passagedata pid="1209" name="(0, 2" tags="" position="2675,825" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
