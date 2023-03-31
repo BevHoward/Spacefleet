@@ -88,6 +88,9 @@ Return to [[Earth, 2235]]</tw-passagedata><tw-passagedata pid="3" name="Start" t
 (text-colour:yellow)[&#39;&#39;Name&#39;&#39;:] (text-colour:white)[ $player]
 (text-colour:yellow)[&#39;&#39;Experience Points&#39;&#39;:] (text-colour:white)[ $XP]
 (text-colour: yellow)[&#39;&#39;Ship Level&#39;&#39;:] (text-colour:white)[ $ship]
+(text-colour: yellow)[&#39;&#39;Shield Strength&#39;&#39;:] (text-colour:white)[ $shield]
+(text-colour: yellow)[&#39;&#39;Hull Strength&#39;&#39;:] (text-colour:white)[ $hull]
+(text-colour: yellow)[&#39;&#39;Systems Strength&#39;&#39;:] (text-colour:white)[ $systems]
 (text-colour:yellow)[&#39;&#39;Trilithium&#39;&#39;:] (text-colour:white)[ $trilithium] 
 (text-colour:yellow)[&#39;&#39;Quaterium&#39;&#39;:] (text-colour:white)[ $quaterium ]
 (text-colour:yellow)[&#39;&#39;PVE Win-Loss Record&#39;&#39;:] (text-colour:white)[ $PVEwin and $PVEloss ]
@@ -1896,7 +1899,7 @@ Probe launch successful, (print: $player), you found:
 
 
 What would you like to do?
-Harvest trilithium [[Harvest (2, 2)]]
+Harvest quaterium [[Harvest (2, 2)]]
 Return to [[(2, 2)]]
 
 (text-color:orange)[(if: $CM001 is &quot;true&quot;)[CM-001 Current Scan Data:
@@ -2547,7 +2550,7 @@ This item costs 1000 QD and 5 TC. You must also have earned at least 1000 XP to 
 Your current ship level is: (text-color:#FA8072)[$ship]
 
 [(b4r-color:#4682B4)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1VHii_I37VfH74h167z0321VDdNqVxaEn&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]] (text-color:#B0E0E6)[&#39;&#39;Level 3 Ship Hull:&#39;&#39;] 
-(if: $L3_Ship_Recipe is &quot;complete&quot;)[(text-colour: yellow)[You have already used this recipe.]](if: $L3_Ship_Recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[This recipe allows you to upgrade your ship to a level two hull.
+(if: $L3_Ship_Recipe is &quot;complete&quot;)[(text-colour: yellow)[You have already used this recipe.]](if: $L3_Ship_Recipe is &quot;true&quot;)[(text-color:#FFEBCD)[(css: &quot;font-size: 75%;&quot;)[This recipe allows you to upgrade your ship to a level three hull.
 This item costs 5000 QD and 5 TC. You must also have earned at least 2000 XP to be able to purchase the upgrade]]](if: $L3_Ship_Recipe is &quot;false&quot;)[You have not unlocked this recipe yet.]
 Your current ship level is: (text-color:#FA8072)[$ship]
 
@@ -7359,7 +7362,7 @@ You now have $quaterium quaterium dioxide.
 (if: $ship &gt; 9)[(set: $max_quaterium to 350000)](else-if: $ship &gt; 8)[(set: $max_quaterium to 225000)](else-if: $ship &gt; 7)[(set: $max_quaterium to 150000)](else-if: $ship &gt; 6)[(set: $max_quaterium to 100000)](else-if: $ship &gt; 5)[(set: $max_quaterium to 75000)](else-if: $ship &gt; 4)[(set: $max_quaterium to 40000)](else-if: $ship &gt; 3)[(set: $max_quaterium to 20000)](else-if: $ship &gt; 2)[(set: $max_quaterium to 10000)](else-if: $ship &gt; 1)[(set: $max_quaterium to 5000)](else:)[(set: $quaterium to $quaterium)]
 Return to [[(-1, -5)]]</tw-passagedata><tw-passagedata pid="586" name="fight!" tags="PVE" position="100,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]
 (text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**A fierce pirate schooner emerges from behind an asteroid on the port side of your viewscreen, weapons ready!**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1LwRZr0gFOpm74tS7ZayV90aE4atmRweU&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirate1_shield to 5)(set: $pirate1_hull to 10)(set: $pirate1_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirate1_shield to 5)(set: $pirate1_hull to 10)(set: $pirate1_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)(set:$shield_pve to $shield)(set:$hull_pve to $hull)(set:$systems_pve to $systems)
 A quick scan shows:
 
 (text-color:yellow)[Pirate Shield Strength:] $pirate1_shield
@@ -7372,7 +7375,7 @@ You have $counter turns to incapacitate the ship. What do you do?
 
 Fire quatron [[lasers]]
 Fire trilithium [[torpedoes]]</tw-passagedata><tw-passagedata pid="587" name="lasers" tags="" position="200,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Your forward viewscreen flares bright red as your quatron lasers flash across the gap between you and the pirates. They may not be the most powerful weapons, but when they hit an enemy ship&#39;s shields, they cut through with surgical precision.
 
 (text-color:orange)[Fire quatron lasers:] (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
@@ -7385,13 +7388,13 @@ Your ship hit the enemy $target!
 (text-color:orange)[Pirate Hull Strength:] $pirate1_hull
 (text-color:blue)[Pirate Systems Function:] $pirate1_systems
 
-(set: $p1_hit to (either:1,2,3,4))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $p1_hit damage to $ptarget! //(set:$shield to it - $p1_hit)]](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p1_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p1_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $ptarget!//]]
+(set: $p1_hit to (either:1,2,3,4))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $p1_hit damage to $ptarget! //(set:$shield_pve to it - $p1_hit)]](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p1_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p1_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $ptarget!//]]
 
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -7403,7 +7406,7 @@ What do you want to do?
 Fire [[lasers]]
 Fire [[torpedoes]]]</tw-passagedata><tw-passagedata pid="588" name="torpedoes" tags="" position="300,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -7413,12 +7416,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate1_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate1_hull
 (text-color:blue)[Pirate Systems Function:] $pirate1_systems
-(set: $p1_hit to (either:1,2,3,4))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p1_hit damage to $ptarget! (set:$shield to it - $p1_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p1_hit)The pirate&#39;s weapons damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p1_hit to (either:1,2,3,4))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p1_hit damage to $ptarget! (set:$shield to it - $p1_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p1_hit)The pirate&#39;s weapons damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -7475,7 +7478,7 @@ If I were you, I&#39;d bring the fleet admiral some Arvedan Summer Tea when you 
 Maybe...
 
 </tw-passagedata><tw-passagedata pid="592" name="quatron lasers" tags="" position="200,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire quatron lasers: (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
 (set: $dmg to $laser_hit)
 Your ship hit the enemy $target! 
@@ -7485,12 +7488,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate1_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate1_hull
 (text-color:blue)[Pirate Systems Function:] $pirate1_systems
-(set: $p1_hit to (either:1,2,3,4))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p1_hit damage to $ptarget! (set:$shield to it - $p1_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p1_hit to (either:1,2,3,4))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p1_hit damage to $ptarget! (set:$shield_pve to it - $p1_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -7498,7 +7501,7 @@ Your ship hit the enemy $target!
 What do you want to do?
 Fire [[quatron lasers]]
 Fire [[trilithium torpedoes]]]</tw-passagedata><tw-passagedata pid="593" name="trilithium torpedoes" tags="" position="300,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -7508,12 +7511,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate1_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate1_hull
 (text-color:blue)[Pirate Systems Function:] $pirate1_systems
-(set: $p1_hit to (either:1,2,3,4))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p1_hit damage to $ptarget! (set:$shield to it - $p1_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p1_hit to (either:1,2,3,4))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p1_hit damage to $ptarget! (set:$shield_pve to it - $p1_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p1_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -7537,9 +7540,9 @@ Final Pirate Ship Stats:
 
 Your Ship Stats:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (set: $XP to it + 450)Your victory has earned you 450 XP, $player.
 
@@ -7917,9 +7920,9 @@ What would you like to do?
 
 Return to [[(-4, 3)]]
 
-(text-color:yellow)[**Take a screenshot of the above text and upload it to mission CM-012 in Canvas. Code DDR5T unlocks the mission.**]</tw-passagedata><tw-passagedata pid="618" name="Training Test" tags="cadet" position="3425,100" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1HrfBwfnSFqfBrNkUboZaZy-HBtFYCf_6&quot;&gt;]]]
+(text-color:yellow)[**Take a screenshot of the above text and upload it to mission CM-012 in Canvas. Code DDR5T unlocks the mission.**]</tw-passagedata><tw-passagedata pid="618" name="Training Test" tags="cadet" position="3425,100" size="100,100">(if: $player is &quot;sira&quot;)[(set: $shield to 6)(set: $hull to 10)(set: $systems to 6)] (text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1HrfBwfnSFqfBrNkUboZaZy-HBtFYCf_6&quot;&gt;]]]
 (text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**Sensors pick up a small armed craft closing in on your position. Weapons are armed - it&#39;s coming in hot!**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1R4m3h2g9MhWz_dqToh_-Ai_YxNgN6gQN&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $training_shield to 5)(set: $training_hull to 10)(set: $training_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $training_shield to 5)(set: $training_hull to 10)(set: $training_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)(set:$shield_pve to $shield)(set:$hull_pve to $hull)(set:$systems_pve to $systems)
 A quick scan shows:
 
 (text-color:yellow)[Training Ship Shield Strength:] $training_shield
@@ -7933,7 +7936,7 @@ You have $counter turns to destroy the training ship. What do you do?
 Fire quatron [[lasers  ]]
 Fire trilithium [[torpedoes  ]]</tw-passagedata><tw-passagedata pid="619" name="Live Fire Test" tags="cadet" position="3550,100" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1hk_hZo35uFL_R6pxQ-tyQOcLaEAXtlJB&quot;&gt;]]]
 (text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**Sensors pick up a pirate craft closing in on your position. Weapons are armed and targeting us!**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1wITZ-_umTcRpFcx77vR5QkLtt_aW8l86&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $training_shield to 5)(set: $training_hull to 10)(set: $training_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $training_shield to 5)(set: $training_hull to 10)(set: $training_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)(set:$shield_pve to $shield)(set:$hull_pve to $hull)(set:$systems_pve to $systems)
 A quick scan shows:
 
 (text-color:yellow)[Pirate Ship Shield Strength:] $pirate_training_shield
@@ -8948,12 +8951,12 @@ Congratulations on your successful upgrade! Now, get out there and keep our terr
 (set: $shield to it + 2)(set: $hull to it + 6)(set: $systems to it + 1)
 Return to [[Dock]]
 </tw-passagedata><tw-passagedata pid="731" name="Mining Laser" tags="" position="7500,250" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1cNyDvzUAxVJCr3bG65PO_359xpzQ_vGN&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if: $level is &quot;yes&quot;)[(set: $laser to 1)]
-(if:$Q_Vault is &lt; 1 or $server is &lt; 1)[Sorry, Cadet, but you can&#39;t afford this upgrade yet.]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+(if:$Q_Vault is &lt; 1)[Sorry, Cadet, but you need to craft and hold a Quaterium Vault to purchase this upgrade.](else-if:$server is &lt; 1)[Sorry, Cadet, but you need to craft and hold a Server Upgrade to purchase this upgrade.]
 (if: $Q_Vault is &gt;0 and $server is &gt;0)[(set: $level to (prompt: &quot;Upgrade lasers? yes or no&quot;, &quot;no&quot;))(if: $level is &quot;yes&quot;)[(set: $Q_Vault to it - 1)(set: $server to it - 1) You&#39;re all set! Enjoy true firepower, Cadet! Just don&#39;t go around blasting things you shouldn&#39;t...]
 (else-if: $level is &quot;no&quot;)[No worries, Cadet. Come back whenever you&#39;re ready to make the purchase.]
 (else:)[You didn&#39;t enter either &#39;&#39;yes&#39;&#39; or &#39;&#39;no&#39;&#39; using lower case letters]]
-
+(if: $level is &quot;yes&quot;)[(set: $laser to 1)]
 What would you like to do?
 
 (set: $name to (history:)&#39;s last)
@@ -8971,12 +8974,12 @@ This will be a dangerous mission. Good luck!
 What do you want to do?
 
 Return to [[(-4, 3)]]</tw-passagedata><tw-passagedata pid="733" name="Science Probe" tags="" position="7625,250" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1uSqBg8ccU0C0Eu3rtVcnxYTJr8XcmiLm&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if: $level is &quot;yes&quot;)[(set: $torpedo to 1)]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 (if:$T_Vault is &lt; 2)[Sorry, Cadet, but you can&#39;t afford this upgrade yet.]
 (if: $T_Vault is &gt;1)[(set: $level to (prompt: &quot;Upgrade probe launchers to torpedo bays? yes or no&quot;, &quot;no&quot;))(if: $level is &quot;yes&quot;)[(set: $T_Vault to it - 2)You&#39;re all set! Just don&#39;t mix up the probe and torpedo buttons - you don&#39;t want to end up like Ensign McDougal.]
 (else-if: $level is &quot;no&quot;)[No worries, Cadet. Come back whenever you&#39;re ready to make the purchase.]
 (else:)[You didn&#39;t enter either &#39;&#39;yes&#39;&#39; or &#39;&#39;no&#39;&#39; using lower case letters]]
-
+(if: $level is &quot;yes&quot;)[(set: $torpedo to 1)]
 What would you like to do?
 
 (set: $name to (history:)&#39;s last)
@@ -9015,9 +9018,9 @@ Return to (link-goto: $name)</tw-passagedata><tw-passagedata pid="789" name="Shi
 (text-colour: yellow)[Quaterium Laser Upgrade:](if: $laser &gt;0)[(text-colour:green)[ You already have this upgrade]] (else-if: $laser_recipe is &quot;true&quot;)[Purchase [[Mining Laser]] Upgrade](else:) [(text-colour:red)[Unavailable - check requirements]]
 (text-colour: yellow)[Trilithium Torpedo Upgrade:] (if: $torpedo &gt;0)[(text-colour:green)[ You already have this upgrade]] (else-if: $torpedo_recipe is &quot;true&quot;)[Purchase [[Science Probe]] Upgrade](else:) [(text-colour:red)[Unavailable - check requirements]]
 
-(text-colour: #F4A460)[Shields Up! Level 1 Upgrade:] (if: $shields_up_1_recipe is &quot;true&quot;)[Purchase [[Shield Upgrade]]] (if: $shields_up_1_recipe is &quot;complete&quot;)[(text-colour: green)[You already have this upgrade]] (else:) [(text-colour:red)[Unavailable - check requirements]]
-(text-colour: #F4A460)[Armor Plating Level 1 Upgrade:] (if: $armour_plating_1_recipe is &quot;true&quot;)[Purchase [[Armor Plating]]] (if: $armour_plating_1_recipe is &quot;complete&quot;)[(text-colour: green)[You already have this upgrade]] (else:) [(text-colour:red)[Unavailable - check requirements]]
-(text-colour: #F4A460)[Systems Level 1 Upgrade:] (if: $systems_upgrade_1_recipe is &quot;true&quot;)[Purchase [[Systems Upgrade]]](if: $systems_upgrade_1_recipe is &quot;complete&quot;)[(text-colour: green)[You already have this upgrade]] (else:) [(text-colour:red)[Unavailable - check requirements]]
+(text-colour: #F4A460)[Shields Up! Level 1 Upgrade:] (if: $shields_up_1_recipe is &quot;true&quot;)[Purchase [[Shield Upgrade]]] (else-if: $shields_up_1_recipe is &quot;complete&quot;)[(text-colour: green)[You already have this upgrade]] (else:) [(text-colour:red)[Unavailable - check requirements]]
+(text-colour: #F4A460)[Armor Plating Level 1 Upgrade:] (if: $armour_plating_1_recipe is &quot;true&quot;)[Purchase [[Armor Plating]]] (else-if: $armour_plating_1_recipe is &quot;complete&quot;)[(text-colour: green)[You already have this upgrade]] (else:) [(text-colour:red)[Unavailable - check requirements]]
+(text-colour: #F4A460)[Systems Level 1 Upgrade:] (if: $systems_upgrade_1_recipe is &quot;true&quot;)[Purchase [[Systems Upgrade]]](else-if: $systems_upgrade_1_recipe is &quot;complete&quot;)[(text-colour: green)[You already have this upgrade]] (else:) [(text-colour:red)[Unavailable - check requirements]]
 
 Return to [[SSA-006]]</tw-passagedata><tw-passagedata pid="790" name="Ship Upgrade  " tags="" position="7750,0" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1ZdHQQhnhkWp6lcNKuRM1D9z1GJAHn5Su&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
@@ -10337,7 +10340,7 @@ What would you like to do?
 Harvest quaterium [[Harvest (11, -4)]]
 Return to [[(11, -4)]]</tw-passagedata><tw-passagedata pid="930" name="Explore (12, -4)" tags="" position="5200,4900" size="100,100"></tw-passagedata><tw-passagedata pid="931" name="Explore (13, -4)" tags="" position="5450,4900" size="100,100"></tw-passagedata><tw-passagedata pid="932" name="Live Test" tags="cadet" position="3300,100" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]
 (text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**Sensors pick up a large piece of space debris headed directly for you! Destroy it before it impacts with your hull.**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=17_MkFZD2-LEf0PSol6Zmqqt4-4dG_6zZ&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $debris_shield to 5)(set: $debris_hull to 10)(set: $debris_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $debris_shield to 5)(set: $debris_hull to 10)(set: $debris_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)(set:$shield_pve to $shield)(set:$hull_pve to $hull)(set:$systems_pve to $systems)
 A quick scan shows:
 
 (text-color:yellow)[Space Debris Shield Strength:] $debris_shield
@@ -10367,9 +10370,9 @@ Your ship hit the debris&#39;s $target!
 
 The debris will not fire back. However, in a real battle, damage taken to your ship shows here:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10394,9 +10397,9 @@ Your ship hit the enemy $target!
 
 The debris will not fire back. However, in a real battle, damage taken to your ship shows here:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10473,9 +10476,9 @@ Final Debris Stats:
 
 Your Ship Stats:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (set: $XP to it + 250)$player, your victory has earned you:
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1RN2XnJqUkyImXYl3AkhXE1IUI05970WH&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]]250 XP
@@ -10499,9 +10502,9 @@ Your ship hit the enemy $target!
 
 The debris will not fire back. However, in a real battle, damage taken to your ship shows here:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10522,9 +10525,9 @@ Your ship hit the enemy $target!
 
 The debris will not fire back. However, in a real battle, damage taken to your ship shows here:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10532,7 +10535,7 @@ The debris will not fire back. However, in a real battle, damage taken to your s
 What do you want to do?
 Fire [[quatron lasers ]]
 Fire [[trilithium torpedoes ]]]</tw-passagedata><tw-passagedata pid="941" name="lasers  " tags="cadet" position="900,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Your forward viewscreen flares bright red as your quatron lasers flash across the gap between you and the training vessel. They may not be the most powerful weapons, but when they hit an enemy ship&#39;s shields, they cut through with surgical precision.
 
 (text-color:orange)[Fire quatron lasers:] (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
@@ -10545,13 +10548,13 @@ Your ship hit the enemy $target!
 (text-color:orange)[Training Ship Hull Strength:] $training_hull
 (text-color:blue)[Training Ship Systems Function:] $training_systems
 
-(set: $t1_hit to (either:1,2))(if: $shield &lt;= 0)[(set: $ttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ttarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the training ship retaliates and does $t1_hit damage to $ttarget! //(set:$shield to it - $t1_hit)]](if: $ttarget is &quot;your hull&quot;)[(set:$hull to it - $t1_hit)(text-color:cyan)[//Nasty hit! The vessel&#39;s weapons damage $ttarget!//]](if:$ttarget is &quot;your systems&quot;)[(set:$systems to it - $t1_hit)(text-color:cyan)[//The training ship&#39;s weapons bypass your shields and damage $ttarget!//]]
+(set: $t1_hit to (either:1,2))(if: $shield_pve &lt;= 0)[(set: $ttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ttarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the training ship retaliates and does $t1_hit damage to $ttarget! //(set:$shield_pve to it - $t1_hit)]](if: $ttarget is &quot;your hull&quot;)[(set:$hull_pve to it - $t1_hit)(text-color:cyan)[//Nasty hit! The vessel&#39;s weapons damage $ttarget!//]](if:$ttarget is &quot;your systems&quot;)[(set:$systems_pve to it - $t1_hit)(text-color:cyan)[//The training ship&#39;s weapons bypass your shields and damage $ttarget!//]]
 
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10563,7 +10566,7 @@ What do you want to do?
 Fire [[lasers  ]]
 Fire [[torpedoes  ]]]</tw-passagedata><tw-passagedata pid="942" name="torpedoes  " tags="cadet" position="1000,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -10573,12 +10576,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Training Ship Shield Strength:] $training_shield
 (text-color:orange)[Training Ship Hull Strength:] $training_hull
 (text-color:blue)[Training Ship Systems Function:] $training_systems
-(set: $t1_hit to (either:1,2))(if: $shield &lt;= 0)[(set: $ttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ttarget is &quot;your shields&quot;)[The training ship retaliates and does $t1_hit damage to $ttarget! (set:$shield to it - $t1_hit)](if: $ttarget is &quot;your hull&quot;)[(set:$hull to it - $t1_hit)The training vessel&#39;s weapons damage $ttarget!](if:$ttarget is &quot;your systems&quot;)[(set:$systems to it - $t1_hit)The ship&#39;s weapons bypass your shields and damage $ttarget!]
+(set: $t1_hit to (either:1,2))(if: $shield_pve &lt;= 0)[(set: $ttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ttarget is &quot;your shields&quot;)[The training ship retaliates and does $t1_hit damage to $ttarget! (set:$shield_pve to it - $t1_hit)](if: $ttarget is &quot;your hull&quot;)[(set:$hull_pve to it - $t1_hit)The training vessel&#39;s weapons damage $ttarget!](if:$ttarget is &quot;your systems&quot;)[(set:$systems_pve to it - $t1_hit)The ship&#39;s weapons bypass your shields and damage $ttarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10624,7 +10627,7 @@ You have $counter turns to incapacitate the ship. What do you do?
 
 Fire [[quatron lasers  ]]
 Fire [[trilithium torpedoes  ]]</tw-passagedata><tw-passagedata pid="945" name="quatron lasers  " tags="cadet" position="900,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire quatron lasers: (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
 (set: $dmg to $laser_hit)
 Your ship hit the enemy $target! 
@@ -10634,12 +10637,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Training Ship Shield Strength:] $training_shield
 (text-color:orange)[Training Ship Hull Strength:] $training_hull
 (text-color:blue)[Training Ship Systems Function:] $training_systems
-(set: $t1_hit to (either:1,2))(if: $shield &lt;= 0)[(set: $ttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ttarget is &quot;your shields&quot;)[The training ship retaliates and does $t1_hit damage to $ttarget! (set:$shield to it - $t1_hit)](if: $ttarget is &quot;your hull&quot;)[(set:$hull to it - $t1_hit)The training vessel&#39;s weapons bypass your shields and damage $ttarget!](if:$ttarget is &quot;your systems&quot;)[(set:$systems to it - $t1_hit)The ship&#39;s weapons bypass your shields and damage $ttarget!]
+(set: $t1_hit to (either:1,2))(if: $shield_pve &lt;= 0)[(set: $ttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ttarget is &quot;your shields&quot;)[The training ship retaliates and does $t1_hit damage to $ttarget! (set:$shield_pve to it - $t1_hit)](if: $ttarget is &quot;your hull&quot;)[(set:$hull_pve to it - $t1_hit)The training vessel&#39;s weapons bypass your shields and damage $ttarget!](if:$ttarget is &quot;your systems&quot;)[(set:$systems_pve to it - $t1_hit)The ship&#39;s weapons bypass your shields and damage $ttarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10657,7 +10660,7 @@ You have $counter turns to destroy the ship. What do you do?
 
 Fire [[quatron lasers  ]]
 Fire [[trilithium torpedoes  ]]</tw-passagedata><tw-passagedata pid="947" name="trilithium torpedoes  " tags="cadet" position="1000,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Training Vessel Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -10667,12 +10670,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Training Ship Shield Strength:] $training_shield
 (text-color:orange)[Training Ship Hull Strength:] $training_hull
 (text-color:blue)[Training Ship Systems Function:] $training_systems
-(set: $t1_hit to (either:1,2))(if: $shield &lt;= 0)[(set: $ttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ttarget is &quot;your shields&quot;)[The training ship retaliates and does $t1_hit damage to $ttarget! (set:$shield to it - $t1_hit)](if: $ttarget is &quot;your hull&quot;)[(set:$hull to it - $t1_hit)The training vessel&#39;s weapons bypass your shields and damage $ttarget!](if:$ttarget is &quot;your systems&quot;)[(set:$systems to it - $t1_hit)The ship&#39;s weapons bypass your shields and damage $ttarget!]
+(set: $t1_hit to (either:1,2))(if: $shield_pve &lt;= 0)[(set: $ttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ttarget is &quot;your shields&quot;)[The training ship retaliates and does $t1_hit damage to $ttarget! (set:$shield_pve to it - $t1_hit)](if: $ttarget is &quot;your hull&quot;)[(set:$hull_pve to it - $t1_hit)The training vessel&#39;s weapons bypass your shields and damage $ttarget!](if:$ttarget is &quot;your systems&quot;)[(set:$systems_pve to it - $t1_hit)The ship&#39;s weapons bypass your shields and damage $ttarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10696,9 +10699,9 @@ Final Training Ship Stats:
 
 Your Ship Stats:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (set: $XP to it + 300)$player, your victory has earned you: 
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1RN2XnJqUkyImXYl3AkhXE1IUI05970WH&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]]300 XP
@@ -10709,7 +10712,7 @@ Your Ship Stats:
 
 What would you like to do?
 Return to [[(4, -3)]]</tw-passagedata><tw-passagedata pid="949" name="lasers   " tags="cadet" position="1250,5400" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[&lt;img src=&quot;https://drive.google.com/uc?(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Your forward viewscreen flares bright red as your quatron lasers flash across the gap between you and the pirate ship. They may not be the most powerful weapons, but when they hit an enemy ship&#39;s shields, they cut through with surgical precision.
 
 (text-color:orange)[Fire quatron lasers:] (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
@@ -10722,13 +10725,13 @@ Your ship hit the enemy $target!
 (text-color:orange)[Pirate Training Ship Hull Strength:] $pirate_training_hull
 (text-color:blue)[Pirate Training Ship Systems Function:] $pirate_training_systems
 
-(set: $pt1_hit to (either:1,2,3))(if: $shield &lt;= 0)[(set: $pttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $pttarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $pt1_hit damage to $pttarget! //(set:$shield to it - $pt1_hit)]](if: $pttarget is &quot;your hull&quot;)[(set:$hull to it - $pt1_hit)(text-color:cyan)[//Nasty hit! The vessel&#39;s weapons damage $pttarget!//]](if:$pttarget is &quot;your systems&quot;)[(set:$systems to it - $pt1_hit)(text-color:cyan)[//The pirate ship&#39;s weapons bypass your shields and damage $pttarget!//]]
+(set: $pt1_hit to (either:1,2,3))(if: $shield_pve &lt;= 0)[(set: $pttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pttarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $pt1_hit damage to $pttarget! //(set:$shield_pve to it - $pt1_hit)]](if: $pttarget is &quot;your hull&quot;)[(set:$hull_pve to it - $pt1_hit)(text-color:cyan)[//Nasty hit! The vessel&#39;s weapons damage $pttarget!//]](if:$pttarget is &quot;your systems&quot;)[(set:$systems_pve to it - $pt1_hit)(text-color:cyan)[//The pirate ship&#39;s weapons bypass your shields and damage $pttarget!//]]
 
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10740,7 +10743,7 @@ What do you want to do?
 Fire [[lasers   ]]
 Fire [[torpedoes   ]]]</tw-passagedata><tw-passagedata pid="950" name="torpedoes   " tags="cadet" position="1350,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -10750,12 +10753,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Training Ship Shield Strength:] $pirate_training_shield
 (text-color:orange)[Training Ship Hull Strength:] $pirate_training_hull
 (text-color:blue)[Training Ship Systems Function:] $pirate_training_systems
-(set: $pt1_hit to (either:1,2,3))(if: $shield &lt;= 0)[(set: $pttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $pttarget is &quot;your shields&quot;)[The pirate ship retaliates and does $pt1_hit damage to $pttarget! (set:$shield to it - $pt1_hit)](if: $pttarget is &quot;your hull&quot;)[(set:$hull to it - $pt1_hit)The pirate vessel&#39;s weapons damage $pttarget!](if:$pttarget is &quot;your systems&quot;)[(set:$systems to it - $pt1_hit)The ship&#39;s weapons bypass your shields and damage $pttarget!]
+(set: $pt1_hit to (either:1,2,3))(if: $shield_pve &lt;= 0)[(set: $pttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pttarget is &quot;your shields&quot;)[The pirate ship retaliates and does $pt1_hit damage to $pttarget! (set:$shield_pve to it - $pt1_hit)](if: $pttarget is &quot;your hull&quot;)[(set:$hull_pve to it - $pt1_hit)The pirate vessel&#39;s weapons damage $pttarget!](if:$pttarget is &quot;your systems&quot;)[(set:$systems_pve to it - $pt1_hit)The ship&#39;s weapons bypass your shields and damage $pttarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10809,7 +10812,7 @@ You have $counter turns to destroy the ship. What do you do?
 
 Fire [[quatron lasers   ]]
 Fire [[trilithium torpedoes   ]]</tw-passagedata><tw-passagedata pid="954" name="quatron lasers   " tags="cadet" position="1250,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire quatron lasers: (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
 (set: $dmg to $laser_hit)
 Your ship hit the enemy $target! 
@@ -10819,12 +10822,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Training Ship Shield Strength:] $pirate_training_shield
 (text-color:orange)[Pirate Training Ship Hull Strength:] $pirate_training_hull
 (text-color:blue)[Pirate Training Ship Systems Function:] $pirate_training_systems
-(set: $pt1_hit to (either:1,2,3))(if: $shield &lt;= 0)[(set: $pttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $pttarget is &quot;your shields&quot;)[The pirate ship retaliates and does $pt1_hit damage to $pttarget! (set:$shield to it - $pt1_hit)](if: $pttarget is &quot;your hull&quot;)[(set:$hull to it - $pt1_hit)The pirate vessel&#39;s weapons bypass your shields and damage $pttarget!](if:$pttarget is &quot;your systems&quot;)[(set:$systems to it - $pt1_hit)The ship&#39;s weapons bypass your shields and damage $pttarget!]
+(set: $pt1_hit to (either:1,2,3))(if: $shield_pve &lt;= 0)[(set: $pttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pttarget is &quot;your shields&quot;)[The pirate ship retaliates and does $pt1_hit damage to $pttarget! (set:$shield_pve to it - $pt1_hit)](if: $pttarget is &quot;your hull&quot;)[(set:$hull_pve to it - $pt1_hit)The pirate vessel&#39;s weapons bypass your shields and damage $pttarget!](if:$pttarget is &quot;your systems&quot;)[(set:$systems_pve to it - $pt1_hit)The ship&#39;s weapons bypass your shields and damage $pttarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10832,7 +10835,7 @@ Your ship hit the enemy $target!
 What do you want to do?
 Fire [[quatron lasers   ]]
 Fire [[trilithium torpedoes   ]]]</tw-passagedata><tw-passagedata pid="955" name="trilithium torpedoes   " tags="cadet" position="1350,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Pirate Training Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -10842,12 +10845,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Training Ship Shield Strength:] $pirate_training_shield
 (text-color:orange)[Pirate Training Ship Hull Strength:] $pirate_training_hull
 (text-color:blue)[Pirate Training Ship Systems Function:] $pirate_training_systems
-(set: $pt1_hit to (either:1,2,3))(if: $shield &lt;= 0)[(set: $pttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $pttarget is &quot;your shields&quot;)[The pirate ship retaliates and does $pt1_hit damage to $pttarget! (set:$shield to it - $pt1_hit)](if: $pttarget is &quot;your hull&quot;)[(set:$hull to it - $pt1_hit)The vessel&#39;s weapons bypass your shields and damage $pttarget!](if:$pttarget is &quot;your systems&quot;)[(set:$systems to it - $pt1_hit)The ship&#39;s weapons bypass your shields and damage $pttarget!]
+(set: $pt1_hit to (either:1,2,3))(if: $shield_pve &lt;= 0)[(set: $pttarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pttarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pttarget is &quot;your shields&quot;)[The pirate ship retaliates and does $pt1_hit damage to $pttarget! (set:$shield_pve to it - $pt1_hit)](if: $pttarget is &quot;your hull&quot;)[(set:$hull_pve to it - $pt1_hit)The vessel&#39;s weapons bypass your shields and damage $pttarget!](if:$pttarget is &quot;your systems&quot;)[(set:$systems_pve to it - $pt1_hit)The ship&#39;s weapons bypass your shields and damage $pttarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10875,9 +10878,9 @@ Final Pirate Training Ship Stats:
 
 Your Ship Stats:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (set: $XP to it + 300)$player your victory has earned you: 
 [(b4r-color:#00FF00)+(b4r:&quot;ridge&quot;)+(b4r-size:3)+(corner-radius:8)[&lt;img src=&quot;https://drive.google.com/uc?id=1RN2XnJqUkyImXYl3AkhXE1IUI05970WH&quot; width=&quot;75px&quot; height=&quot;75px&quot;&gt;]]300 XP
@@ -10888,7 +10891,7 @@ Your Ship Stats:
 
 What would you like to do?
 Return to [[(1, -4)]]</tw-passagedata><tw-passagedata pid="957" name="Lasers" tags="" position="1700,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 2&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 2&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Your forward viewscreen flares bright red as your quatron lasers flash across the gap between you and the pirates. They may not be the most powerful weapons, but when they hit an enemy ship&#39;s shields, they cut through with surgical precision.
 
 (text-color:orange)[Fire quatron lasers:] (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
@@ -10901,13 +10904,13 @@ Your ship hit the enemy $target!
 (text-color:orange)[Pirate Hull Strength:] $pirate2_hull
 (text-color:blue)[Pirate Systems Function:] $pirate2_systems
 
-(set: $p2_hit to (either:1,2,3,4))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $p2_hit damage to $ptarget! //(set:$shield to it - $p2_hit)]](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p2_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p2_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $ptarget!//]]
+(set: $p2_hit to (either:1,2,3,4))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $p2_hit damage to $ptarget! //(set:$shield_pve to it - $p2_hit)]](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p2_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p2_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $ptarget!//]]
 
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -10919,7 +10922,7 @@ What do you want to do?
 Fire [[Lasers]]
 Fire [[Torpedoes]]]</tw-passagedata><tw-passagedata pid="958" name="battle" tags="PVE" position="1600,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1HrfBwfnSFqfBrNkUboZaZy-HBtFYCf_6&quot;&gt;]]]
 (text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**A fierce pirate frigate emerges from the nebula, weapons ready!**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=121ia8AybpCUwSqXOf-xMaPTQv4mRNf4W&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirate2_shield to 6)(set: $pirate2_hull to 12)(set: $pirate2_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirate2_shield to 6)(set: $pirate2_hull to 12)(set: $pirate2_systems to 6)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)(set:$shield_pve to $shield)(set:$hull_pve to $hull)(set:$systems_pve to $systems)
 A quick scan shows:
 
 (text-color:yellow)[Pirate Shield Strength:] $pirate2_shield
@@ -10948,9 +10951,9 @@ Final Pirate Ship Stats:
 
 Your Ship Stats:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (set: $XP to it + 450)Your victory has earned you 450 XP, $player.
 
@@ -10995,7 +10998,7 @@ Maybe...
 
 
 </tw-passagedata><tw-passagedata pid="962" name="Quatron Lasers" tags="" position="1700,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 2&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 2&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire quatron lasers: (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
 (set: $dmg to $laser_hit)
 Your ship hit the enemy $target! 
@@ -11005,12 +11008,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate2_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate2_hull
 (text-color:blue)[Pirate Systems Function:] $pirate2_systems
-(set: $p2_hit to (either:1,2,3,4))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p2_hit damage to $ptarget! (set:$shield to it - $p2_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p2_hit to (either:1,2,3,4))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p2_hit damage to $ptarget! (set:$shield_pve to it - $p2_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -11029,7 +11032,7 @@ You have $counter turns to incapacitate the ship. What do you do?
 Fire [[Quatron Lasers]]
 Fire [[Trilithium Torpedoes]]</tw-passagedata><tw-passagedata pid="964" name="Torpedoes" tags="" position="1800,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 2&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 2&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -11039,12 +11042,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate2_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate2_hull
 (text-color:blue)[Pirate Systems Function:] $pirate2_systems
-(set: $p2_hit to (either:1,2,3,4))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p2_hit damage to $ptarget! (set:$shield to it - $p2_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p2_hit)The pirate&#39;s weapons damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p2_hit to (either:1,2,3,4))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p2_hit damage to $ptarget! (set:$shield_pve to it - $p2_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p2_hit)The pirate&#39;s weapons damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -11056,7 +11059,7 @@ Target their [[Systems]]]
 What do you want to do?
 Fire [[Lasers]]
 Fire [[Torpedoes]]]</tw-passagedata><tw-passagedata pid="965" name="Trilithium Torpedoes" tags="" position="1800,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 2&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 2&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 2&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -11066,12 +11069,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate2_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate2_hull
 (text-color:blue)[Pirate Systems Function:] $pirate2_systems
-(set: $p2_hit to (either:1,2,3,4))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p2_hit damage to $ptarget! (set:$shield to it - $p2_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p2_hit to (either:1,2,3,4))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p2_hit damage to $ptarget! (set:$shield_pve to it - $p2_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p2_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -11081,7 +11084,7 @@ Fire [[Quatron Lasers]]
 Fire [[Trilithium Torpedoes]]]</tw-passagedata><tw-passagedata pid="966" name="take it on!" tags="PVE" position="2050,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1hk_hZo35uFL_R6pxQ-tyQOcLaEAXtlJB&quot;&gt;]]]
 (text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**A fierce pirate cruiser emerges from behind the comet, weapons ready!**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1elVFPqKmn7EynqY-KhHOYIYB4KuKvGfk&quot;&gt;]]]
 
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirate3_shield to 6)(set: $pirate3_hull to 14)(set: $pirate3_systems to 7)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirate3_shield to 6)(set: $pirate3_hull to 14)(set: $pirate3_systems to 7)(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)(set:$shield_pve to $shield)(set:$hull_pve to $hull)(set:$systems_pve to $systems)
 A quick scan shows:
 
 (text-color:yellow)[Pirate Shield Strength:] $pirate3_shield
@@ -11095,7 +11098,7 @@ You have $counter turns to incapacitate the ship. What do you do?
 Fire quatron [[Lasers ]]
 Fire trilithium [[Torpedoes ]]
 </tw-passagedata><tw-passagedata pid="967" name="Lasers " tags="" position="2150,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 3&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 3&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Your forward viewscreen flares bright red as your quatron lasers flash across the gap between you and the pirates. They may not be the most powerful weapons, but when they hit an enemy ship&#39;s shields, they cut through with surgical precision.
 
 (text-color:orange)[Fire quatron lasers:] (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
@@ -11108,13 +11111,13 @@ Your ship hit the enemy $target!
 (text-color:orange)[Pirate Hull Strength:] $pirate3_hull
 (text-color:blue)[Pirate Systems Function:] $pirate3_systems
 
-(set: $p3_hit to (either:1,2,3,4,5))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $p3_hit damage to $ptarget! //(set:$shield to it - $p3_hit)]](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p3_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p3_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $ptarget!//]]
+(set: $p3_hit to (either:1,2,3,4,5))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $p3_hit damage to $ptarget! //(set:$shield_pve to it - $p3_hit)]](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p3_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p3_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $ptarget!//]]
 
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -11126,7 +11129,7 @@ What do you want to do?
 Fire [[Lasers ]]
 Fire [[Torpedoes ]]]</tw-passagedata><tw-passagedata pid="968" name="Torpedoes " tags="" position="2250,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 3&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 3&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -11136,12 +11139,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate3_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate3_hull
 (text-color:blue)[Pirate Systems Function:] $pirate3_systems
-(set: $p3_hit to (either:1,2,3,4,5))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p3_hit damage to $ptarget! (set:$shield to it - $p3_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p3_hit)The pirate&#39;s weapons damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p3_hit to (either:1,2,3,4,5))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p3_hit damage to $ptarget! (set:$shield_pve to it - $p3_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p3_hit)The pirate&#39;s weapons damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -11169,9 +11172,9 @@ Final Pirate Ship Stats:
 
 Your Ship Stats:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (set: $XP to it + 500)Your victory has earned you 500 XP, $player.
 
@@ -11226,7 +11229,7 @@ Maybe...
 
 
 </tw-passagedata><tw-passagedata pid="973" name="Quatron Lasers " tags="" position="2150,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 3&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 3&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire quatron lasers: (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
 (set: $dmg to $laser_hit)
 Your ship hit the enemy $target! 
@@ -11236,12 +11239,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate3_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate3_hull
 (text-color:blue)[Pirate Systems Function:] $pirate3_systems
-(set: $p3_hit to (either:1,2,3,4,5))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p3_hit damage to $ptarget! (set:$shield to it - $p3_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p3_hit to (either:1,2,3,4,5))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p3_hit damage to $ptarget! (set:$shield_pve to it - $p3_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -11249,7 +11252,7 @@ Your ship hit the enemy $target!
 What do you want to do?
 Fire [[Quatron Lasers ]]
 Fire [[Trilithium Torpedoes ]]]</tw-passagedata><tw-passagedata pid="974" name="Trilithium Torpedoes " tags="" position="2250,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 3&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;Defeat 3&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;Defeat 3&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -11259,12 +11262,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirate3_shield
 (text-color:orange)[Pirate Hull Strength:] $pirate3_hull
 (text-color:blue)[Pirate Systems Function:] $pirate3_systems
-(set: $p3_hit to (either:1,2,3,4,5))(if: $shield &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p3_hit damage to $ptarget! (set:$shield to it - $p3_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
+(set: $p3_hit to (either:1,2,3,4,5))(if: $shield_pve &lt;= 0)[(set: $ptarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$ptarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $ptarget is &quot;your shields&quot;)[The pirate ship retaliates and does $p3_hit damage to $ptarget! (set:$shield_pve to it - $p3_hit)](if: $ptarget is &quot;your hull&quot;)[(set:$hull_pve to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$ptarget is &quot;your systems&quot;)[(set:$systems_pve to it - $p3_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -11509,10 +11512,10 @@ Return to (link-goto: $name)</tw-passagedata><tw-passagedata pid="1078" name="Ar
 Congratulations on your successful upgrade! No one is going to be punching a hole in your hull any time soon!
 (set: $hull to it + 3)
 Return to [[SSA-006]]</tw-passagedata><tw-passagedata pid="1079" name="Shields Level One" tags="" position="7750,375" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=19viHotPo4rZxLJ8V8-wsyC_Izlq0xcev&quot;&gt;]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if: $shields_up is &quot;Yes&quot;)[(set: $quaterium to it - 12000)](if: $shields_up is &quot;Yes&quot;)[(set: $trilithium to it - 2)](if: $shields_up is &quot;Yes&quot;)[(set: $shields_up_1_recipe to &quot;complete&quot;)]
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $shield to it + 2)
+(set: $quaterium to it - 12000)(set: $trilithium to it - 2)](set: $shields_up_1_recipe to &quot;complete&quot;)
 Congratulations on your successful upgrade! Those pirates should have a much harder time breaking through your shields now!
-(set: $shield to it + 2)
+
 Return to [[SSA-006]]</tw-passagedata><tw-passagedata pid="1080" name="Systems Level One" tags="" position="7750,625" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#BC8F8F)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1x88Cj2c80iFzByPgn-XlQz7LvngAFKLu&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 (if: $systems_up is &quot;Yes&quot;)[(set: $quaterium to it - 10000)](if: $systems_up is &quot;Yes&quot;)[(set: $trilithium to it - 1)](if: $systems_up is &quot;Yes&quot;)[(set: $systems_upgrade_1_recipe to &quot;complete&quot;)]
@@ -11864,7 +11867,7 @@ What do you want to do?
 Return to [[(0, 8)]] demoted, demoralized, and dejected.</tw-passagedata><tw-passagedata pid="1108" name="pirates" tags="PVE" position="4900,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1hk_hZo35uFL_R6pxQ-tyQOcLaEAXtlJB&quot;&gt;]]]
 (text-color:cyan)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(css: &quot;font-size: 125%;&quot;)[**A fierce pirate cruiser emerges from behind the planetoid, weapons ready!**]]]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1elVFPqKmn7EynqY-KhHOYIYB4KuKvGfk&quot;&gt;]]]
 (set: $pirate4 to &quot;true&quot;)
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirates_shield to (either: 6,7,8))(set: $pirates_hull to (either:14,15,16))(set: $pirates_systems to (either:7,8,9))(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](set: $counter to 12)(set: $pirates_shield to (either: 6,7,8))(set: $pirates_hull to (either:14,15,16))(set: $pirates_systems to (either:7,8,9))(set: $lose1 to &quot;false&quot;)(set: $lose2 to &quot;false&quot;)(set:$lose3 to &quot;false&quot;)(set:$shield_pve to $shield)(set:$hull_pve to $hull)(set:$systems_pve to $systems)
 A quick scan shows:
 
 (text-color:yellow)[Pirate Shield Strength:] $pirates_shield
@@ -11881,13 +11884,30 @@ Fire [[your torpedoes]]
 </tw-passagedata><tw-passagedata pid="1109" name="PvE Victory" tags="" position="5200,5400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#DC143C)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 250%;&quot;)[**VICTORY**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#DC143C)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1o6OEWIUhKKUXaSDcbKD_XdLLYMNqd6Z1&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
+
+INSERT VICTORY TEXT HERE
 (set: $PVEwin to it + 1)(set: $trilithium to it + it*75/100)(set: $quaterium to it + it*50/100)
 
+Final Pirate Ship Stats:
 
+(text-color:yellow)[Pirate Shield Strength:] $pirates_shield
+(text-color:orange)[Pirate Hull Strength:] $pirates_hull
+(text-color:blue)[Pirate Systems Function:] $pirates_systems
+
+Your Ship Stats:
+
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
+
+(if: $pirate4 is &quot;true&quot;)[(set: $XP to it + 500)Your victory has earned you 500 XP, $player.]
 
 What do you want to do?
 
-(if: $JO001 is &quot;true&quot;)[Collect mission [[JO-001 Reward]]](if: $pirate4 is &quot;true&quot;)[Return to [[(0, 8)]]]</tw-passagedata><tw-passagedata pid="1110" name="Scan (0, 8)" tags="PVE" position="2100,2000" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1s2v65ovrD94hJxQ6P7rIkGNPyzMWFBSa&quot;&gt;]]]
+(if: $JO001 is &quot;true&quot;)[Collect mission [[JO-001 Reward]]](if: $pirate4 is &quot;true&quot;)[Return to [[(0, 8)]]]
+
+(if: $pirate4 is &quot;true&quot;)[(text-color:green)[**To collect the XP for the classroom leaderboard, take a screenshot of this screen and use the code YF53SD to unlock the Pirate 03 mission in Canvas.**]]
+</tw-passagedata><tw-passagedata pid="1110" name="Scan (0, 8)" tags="PVE" position="2100,2000" size="100,100">[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1s2v65ovrD94hJxQ6P7rIkGNPyzMWFBSa&quot;&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
 
 (if: $pirate4 is &quot;true&quot;)[normal scanning stuff](else:)[red alert pirate stuff]</tw-passagedata><tw-passagedata pid="1111" name="PvE Defeat" tags="" position="5200,5500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#778899)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 250%;&quot;)[**DEFEAT**]]]
@@ -11903,9 +11923,9 @@ Final Pirate Ship Stats:
 
 Your Ship Stats:
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 
 What do you want to do?
@@ -11952,7 +11972,7 @@ You&#39;ll have to do some serious mining to make up for the loss of resources, 
 You pay for the repairs.
 
 (if:$pirate4 is &quot;repair&quot;)[Return to [[SSA-006]]]</tw-passagedata><tw-passagedata pid="1115" name="your lasers" tags="" position="5000,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Your forward viewscreen flares bright red as your quatron lasers flash across the gap between you and the pirates. They may not be the most powerful weapons, but when they hit an enemy ship&#39;s shields, they cut through with surgical precision.
 
 (text-color:orange)[Fire quatron lasers:] (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
@@ -11965,13 +11985,13 @@ Your ship hit the enemy $target!
 (text-color:orange)[Pirate Hull Strength:] $pirates_hull
 (text-color:blue)[Pirate Systems Function:] $pirates_systems
 
-(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $pstarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $ps_hit damage to $pstarget! //(set:$shield to it - $ps_hit)]](if: $pstarget is &quot;your hull&quot;)[(set:$hull to it - $ps_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$pstarget is &quot;your systems&quot;)[(set:$systems to it - $ps_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $pstarget!//]]
+(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield_pve &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pstarget is &quot;your shields&quot;)[(text-color:cyan)[//Your ship shudders and rocks from the impact as the pirate ship retaliates and does $ps_hit damage to $pstarget! //(set:$shield_pve to it - $ps_hit)]](if: $pstarget is &quot;your hull&quot;)[(set:$hull_pve to it - $ps_hit)(text-color:cyan)[//Nasty hit! The pirate&#39;s weapons damage $ptarget!//]](if:$pstarget is &quot;your systems&quot;)[(set:$systems_pve to it - $ps_hit)(text-color:cyan)[//The pirate&#39;s weapons bypass your shields and damage $pstarget!//]]
 
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -12006,7 +12026,7 @@ Fire[[ your lasers]]
 Fire[[ your torpedoes]]
 [[Surrender]]</tw-passagedata><tw-passagedata pid="1118" name="your torpedoes" tags="" position="5100,5400" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
-(if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
+(if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;shields&quot;,&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5,6)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -12016,12 +12036,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirates_shield
 (text-color:orange)[Pirate Hull Strength:] $pirates_hull
 (text-color:blue)[Pirate Systems Function:] $pirates_systems
-(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $ptarget! (set:$shield to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull to it - $ps_hit)The pirate&#39;s weapons damage $pstarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
+(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield_pve &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $ptarget! (set:$shield_pve to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull_pve to it - $ps_hit)The pirate&#39;s weapons damage $pstarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems_pve to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -12034,7 +12054,7 @@ What do you want to do?
 Fire [[your lasers]]
 Fire [[your torpedoes]]]
 [[Surrender]]</tw-passagedata><tw-passagedata pid="1119" name=" your lasers" tags="" position="5000,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire quatron lasers: (set: $laser_hit to ((either:1,2,3,4,5,6)*$laser))$laser_hit 
 (set: $dmg to $laser_hit)
 Your ship hit the enemy $target! 
@@ -12044,12 +12064,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirates_shield
 (text-color:orange)[Pirate Hull Strength:] $pirates_hull
 (text-color:blue)[Pirate Systems Function:] $pirates_systems
-(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $pstarget! (set:$shield to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
+(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield_pve &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $pstarget! (set:$shield_pve to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull_pve to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems_pve to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
@@ -12058,7 +12078,7 @@ What do you want to do?
 Fire[[ your lasers]]
 Fire[[ your torpedoes]]
 [[Surrender]]]</tw-passagedata><tw-passagedata pid="1120" name=" your torpedoes" tags="" position="5100,5600" size="100,100">(text-color:red)[(css: &quot;font-size: 300%;&quot;)[(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[**RED ALERT!**]][(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:red)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1XtZGIvuMxyGwc3FoUlVODk4iDIV0vb_r&quot;&gt;]]]]
-(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
+(text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]](if:$shield_pve is &lt;1)[(set:$lose1 to &quot;true&quot;)](if:$hull_pve is &lt;1)[(set:$lose2 to &quot;true&quot;)](if:$systems_pve is &lt;1)[(set:$lose3 to &quot;true&quot;)](if:$lose1 is &quot;true&quot; and $lose2 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](if:$lose1 is &quot;true&quot; and $lose3 is &quot;true&quot;)[(go-to:&quot;PvE Defeat&quot;)](set: $counter to it - 1)(if: $counter is 0)[(go-to:&quot;PvE Defeat&quot;)](set: $target to (either:&quot;hull&quot;,&quot;systems&quot;))
 Fire trilithium torpedoes: (set: $torpedo_hit to ((either:1,2,3,4,5)*$torpedo))$torpedo_hit 
 (set: $dmg to $torpedo_hit)
 Your ship hit the enemy $target! 
@@ -12068,12 +12088,12 @@ Your ship hit the enemy $target!
 (text-color:yellow)[Pirate Shield Strength:] $pirates_shield
 (text-color:orange)[Pirate Hull Strength:] $pirates_hull
 (text-color:blue)[Pirate Systems Function:] $pirates_systems
-(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
-(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $pstarget! (set:$shield to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
+(set: $ps_hit to (either:1,2,3,4,5,6))(if: $shield_pve &lt;= 0)[(set: $pstarget to (either: &quot;your hull&quot;,&quot;your systems&quot;))](else:)[(set:$pstarget to (either:&quot;your shields&quot;,&quot;your hull&quot;,&quot;your systems&quot;))]
+(if: $pstarget is &quot;your shields&quot;)[The pirate ship retaliates and does $ps_hit damage to $pstarget! (set:$shield_pve to it - $ps_hit)](if: $pstarget is &quot;your hull&quot;)[(set:$hull_pve to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $ptarget!](if:$pstarget is &quot;your systems&quot;)[(set:$systems_pve to it - $ps_hit)The pirate&#39;s weapons bypass your shields and damage $pstarget!]
 
-(text-color:yellow)[Shield Strength:] $shield
-(text-color:orange)[Hull Strength:] $hull
-(text-color:blue)[Systems Function:] $systems
+(text-color:yellow)[Shield Strength:] $shield_pve
+(text-color:orange)[Hull Strength:] $hull_pve
+(text-color:blue)[Systems Function:] $systems_pve
 
 (text-color:red)[You have $counter turns remaining.]
 
