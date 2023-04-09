@@ -46,7 +46,8 @@ tw-hook[name="tooltip"] tw-hook[name="tooltiptext"] {
 /* Show the tooltip text when you mouse over the tooltip container */
 tw-hook[name="tooltip"]:hover tw-hook[name="tooltiptext"] {
 	visibility: visible;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="startup" color="red"></tw-tag><tw-tag name="footer" color="yellow"></tw-tag><tw-tag name="tutorial" color="orange"></tw-tag><tw-tag name="cadet" color="green"></tw-tag><tw-tag name="junior" color="blue"></tw-tag><tw-tag name="origin" color="yellow"></tw-tag><tw-tag name="locations" color="purple"></tw-tag><tw-tag name="PVE" color="red"></tw-tag><tw-tag name="special" color="red"></tw-tag><tw-passagedata pid="1" name="(0, 0)" tags="origin" position="2100,3900" size="100,100">(if: $player is &quot;Wintery&quot;)[(set: $pythagorean_hero_recipe to &quot;true&quot;)](if: $player is &quot;Bigbrainbillybob&quot;)[(set: $pythagorean_hero_recipe to &quot;true&quot;)](align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFD700)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (0, 0)**]]]
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="startup" color="red"></tw-tag><tw-tag name="footer" color="yellow"></tw-tag><tw-tag name="tutorial" color="orange"></tw-tag><tw-tag name="cadet" color="green"></tw-tag><tw-tag name="junior" color="blue"></tw-tag><tw-tag name="origin" color="yellow"></tw-tag><tw-tag name="locations" color="purple"></tw-tag><tw-tag name="PVE" color="red"></tw-tag><tw-tag name="special" color="red"></tw-tag><tw-passagedata pid="1" name="(0, 0)" tags="origin" position="2100,3900" size="100,100">(if: $player is &quot;Wintery&quot;)[(set: $pythagorean_hero_recipe to &quot;true&quot;)](if: $player is &quot;Bigbrainbillybob&quot;)[(set: $pythagorean_hero_recipe to &quot;true&quot;)](align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFD700)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**COORDINATES: (0, 0)**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#FFD700)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;img src=&quot;https://drive.google.com/uc?id=1JnHDfhJc29GvWQL_e81qhiLc95QMBRiH&quot;&gt;]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#87CEEB)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1GvDxIywtDhCEO7AE3e8hBf-pB0XUmkRD/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
 (text-color:grey)[(css: &quot;font-size: 75%;&quot;)[Current Date: *(current-date:) (current-time:)*]]
@@ -11316,6 +11317,19 @@ Will you join the UESF?
 
 Yes. Travel to [[(0, 0)]]
 No. [[Game Over]]
+{(if: (saved-games: ) contains &quot;Slot A&quot;)[
+ (text-colour: yellow) [(link: &quot;Load game&quot;)[(load-game:&quot;Slot A&quot;)]
+]]}
+
+
+
+
+
+
+
+
+
+
 
 </tw-passagedata><tw-passagedata pid="1064" name="JO-001 Reward" tags="" position="3700,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[(css: &quot;font-size: 175%;&quot;)[**JO-001 Reward**]]]
 [(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;XXXX=&quot;)[(b4r-color:#AFEEEE)+(b4r:&quot;ridge&quot;)+(b4r-size:10)+(corner-radius:16)[&lt;iframe src=&quot;https://drive.google.com/file/d/1UFdmmK7Q05KE6vsZK0okbR7YRrR8HppS/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot;&gt;&lt;/iframe&gt;]]]
@@ -13066,7 +13080,7 @@ If there&#39;s one thing you can trust about space pirates it&#39;s that they&#3
 
 What do you want to do?
 
-(if: $JO001 is &quot;true&quot;)[Collect mission [[JO-001]] reward](else:)[Return to [[(-8, 13)]]]</tw-passagedata></tw-storydata>
+(if: $JO001 is &quot;true&quot;)[Collect mission [[JO-001]] reward](else:)[Return to [[(-8, 13)]]]</tw-passagedata><tw-passagedata pid="1214" name="none" tags="none" position="1275,5800" size="100,100">.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
